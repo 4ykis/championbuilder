@@ -1,0 +1,6241 @@
+/*! jQuery UI - v1.11.2 - 2014-12-08
+* http://jqueryui.com
+* Includes: core.css, datepicker.css
+* Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */
+
+.ui-helper-hidden {
+    display: none
+}
+
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+.ui-helper-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    line-height: 1.3;
+    text-decoration: none;
+    font-size: 100%;
+    list-style: none
+}
+
+.ui-helper-clearfix:before, .ui-helper-clearfix:after {
+    content: "";
+    display: table;
+    border-collapse: collapse
+}
+
+.ui-helper-clearfix:after {
+    clear: both
+}
+
+.ui-helper-clearfix {
+    min-height: 0
+}
+
+.ui-helper-zfix {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    filter: Alpha(Opacity=0)
+}
+
+.ui-front {
+    z-index: 100
+}
+
+.ui-state-disabled {
+    cursor: default !important
+}
+
+.ui-icon {
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat
+}
+
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.ui-datepicker {
+    width: 17em;
+    padding: .2em .2em 0;
+    display: none
+}
+
+.ui-datepicker .ui-datepicker-header {
+    position: relative;
+    padding: .2em 0
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em
+}
+
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {
+    top: 1px
+}
+
+.ui-datepicker .ui-datepicker-prev {
+    left: 2px
+}
+
+.ui-datepicker .ui-datepicker-next {
+    right: 2px
+}
+
+.ui-datepicker .ui-datepicker-prev-hover {
+    left: 1px
+}
+
+.ui-datepicker .ui-datepicker-next-hover {
+    right: 1px
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    top: 50%;
+    margin-top: -8px
+}
+
+.ui-datepicker .ui-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center
+}
+
+.ui-datepicker .ui-datepicker-title select {
+    font-size: 1em;
+    margin: 1px 0
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    width: 45%
+}
+
+.ui-datepicker table {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    margin: 0 0 .4em
+}
+
+.ui-datepicker th {
+    padding: .7em .3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0
+}
+
+.ui-datepicker td {
+    border: 0;
+    padding: 1px
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+    display: block;
+    padding: .2em;
+    text-align: right;
+    text-decoration: none
+}
+
+.ui-datepicker .ui-datepicker-buttonpane {
+    background-image: none;
+    margin: .7em 0 0 0;
+    padding: 0 .2em;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button {
+    float: right;
+    margin: .5em .2em .4em;
+    cursor: pointer;
+    padding: .2em .6em .3em .6em;
+    width: auto;
+    overflow: visible
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+    float: left
+}
+
+.ui-datepicker.ui-datepicker-multi {
+    width: auto
+}
+
+.ui-datepicker-multi .ui-datepicker-group {
+    float: left
+}
+
+.ui-datepicker-multi .ui-datepicker-group table {
+    width: 95%;
+    margin: 0 auto .4em
+}
+
+.ui-datepicker-multi-2 .ui-datepicker-group {
+    width: 50%
+}
+
+.ui-datepicker-multi-3 .ui-datepicker-group {
+    width: 33.3%
+}
+
+.ui-datepicker-multi-4 .ui-datepicker-group {
+    width: 25%
+}
+
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {
+    border-left-width: 0
+}
+
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+    clear: left
+}
+
+.ui-datepicker-row-break {
+    clear: both;
+    width: 100%;
+    font-size: 0
+}
+
+.ui-datepicker-rtl {
+    direction: rtl
+}
+
+.ui-datepicker-rtl .ui-datepicker-prev {
+    right: 2px;
+    left: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-next {
+    left: 2px;
+    right: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+    right: 1px;
+    left: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+    left: 1px;
+    right: auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+    clear: right
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button {
+    float: left
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current, .ui-datepicker-rtl .ui-datepicker-group {
+    float: right
+}
+
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {
+    border-right-width: 0;
+    border-left-width: 1px
+}
+
+.mCustomScrollbar {
+    -ms-touch-action: none;
+    touch-action: none
+}
+
+.mCustomScrollbar.mCS_no_scrollbar {
+    -ms-touch-action: auto;
+    touch-action: auto
+}
+
+.mCustomScrollBox {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: none;
+    direction: ltr
+}
+
+.mCSB_container {
+    overflow: hidden;
+    width: auto;
+    height: auto
+}
+
+.mCSB_inside > .mCSB_container {
+    margin-right: 30px
+}
+
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+    margin-right: 0
+}
+
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container {
+    margin-right: 0;
+    margin-left: 30px
+}
+
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+    margin-left: 0
+}
+
+.mCSB_scrollTools {
+    position: absolute;
+    width: 16px;
+    height: auto;
+    left: auto;
+    top: 0;
+    right: 0;
+    bottom: 0
+}
+
+.mCSB_outside + .mCSB_scrollTools {
+    right: -26px
+}
+
+.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, .mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools {
+    right: auto;
+    left: 0
+}
+
+.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools {
+    left: -26px
+}
+
+.mCSB_scrollTools .mCSB_draggerContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: auto
+}
+
+.mCSB_scrollTools a + .mCSB_draggerContainer {
+    margin: 20px 0
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px
+}
+
+.mCSB_scrollTools .mCSB_dragger {
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    z-index: 1
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    position: relative;
+    width: 4px;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    text-align: center
+}
+
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+    width: 12px
+}
+
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+    width: 8px
+}
+
+.mCSB_scrollTools .mCSB_buttonUp, .mCSB_scrollTools .mCSB_buttonDown {
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer
+}
+
+.mCSB_scrollTools .mCSB_buttonDown {
+    bottom: 0
+}
+
+.mCSB_horizontal.mCSB_inside > .mCSB_container {
+    margin-right: 0;
+    margin-bottom: 30px
+}
+
+.mCSB_horizontal.mCSB_outside > .mCSB_container {
+    min-height: 100%
+}
+
+.mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden {
+    margin-bottom: 0
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    width: auto;
+    height: 16px;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    bottom: -26px
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer {
+    margin: 0 20px
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    width: 100%;
+    height: 2px;
+    margin: 7px 0
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger {
+    width: 30px;
+    height: 100%;
+    left: 0
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    width: 100%;
+    height: 4px;
+    margin: 6px auto
+}
+
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+    height: 12px;
+    margin: 2px auto
+}
+
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+    height: 8px;
+    margin: 4px 0
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft, .mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft {
+    left: 0
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight {
+    right: 0
+}
+
+.mCSB_container_wrapper {
+    position: absolute;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: 30px;
+    margin-bottom: 30px
+}
+
+.mCSB_container_wrapper > .mCSB_container {
+    padding-right: 30px;
+    padding-bottom: 30px
+}
+
+.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical {
+    bottom: 20px
+}
+
+.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    right: 20px
+}
+
+.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical {
+    bottom: 0
+}
+
+.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    right: 0
+}
+
+.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    left: 20px
+}
+
+.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    left: 0
+}
+
+.mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper {
+    margin-right: 0;
+    margin-left: 30px
+}
+
+.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container {
+    padding-right: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container {
+    padding-bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden {
+    margin-right: 0;
+    margin-left: 0
+}
+
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden {
+    margin-bottom: 0
+}
+
+.mCSB_scrollTools, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_buttonUp, .mCSB_scrollTools .mCSB_buttonDown, .mCSB_scrollTools .mCSB_buttonLeft, .mCSB_scrollTools .mCSB_buttonRight {
+    -webkit-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+    -o-transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+    transition: opacity .2s ease-in-out, background-color .2s ease-in-out
+}
+
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, .mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail {
+    -webkit-transition: width .2s ease-out .2s, height .2s ease-out .2s, margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out;
+    -moz-transition: width .2s ease-out .2s, height .2s ease-out .2s, margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out;
+    -o-transition: width .2s ease-out .2s, height .2s ease-out .2s, margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out;
+    transition: width .2s ease-out .2s, height .2s ease-out .2s, margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s, opacity .2s ease-in-out, background-color .2s ease-in-out
+}
+
+.mCSB_scrollTools {
+    opacity: 0.75;
+    filter: "alpha(opacity=75)";
+    -ms-filter: "alpha(opacity=75)"
+}
+
+.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools, .mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools {
+    opacity: 0;
+    filter: "alpha(opacity=0)";
+    -ms-filter: "alpha(opacity=0)"
+}
+
+.mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag, .mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag, .mCustomScrollBox:hover > .mCSB_scrollTools, .mCustomScrollBox:hover ~ .mCSB_scrollTools, .mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools, .mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools {
+    opacity: 1;
+    filter: "alpha(opacity=100)";
+    -ms-filter: "alpha(opacity=100)"
+}
+
+.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    filter: "alpha(opacity=40)";
+    -ms-filter: "alpha(opacity=40)"
+}
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.75);
+    filter: "alpha(opacity=75)";
+    -ms-filter: "alpha(opacity=75)"
+}
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.85);
+    filter: "alpha(opacity=85)";
+    -ms-filter: "alpha(opacity=85)"
+}
+
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
+    filter: "alpha(opacity=90)";
+    -ms-filter: "alpha(opacity=90)"
+}
+
+.mCSB_scrollTools .mCSB_buttonUp, .mCSB_scrollTools .mCSB_buttonDown, .mCSB_scrollTools .mCSB_buttonLeft, .mCSB_scrollTools .mCSB_buttonRight {
+    background-image: url(http://mamovediya.com.uamCSB_buttons.png);
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    filter: "alpha(opacity=40)";
+    -ms-filter: "alpha(opacity=40)"
+}
+
+.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: 0 0
+}
+
+.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: 0 -20px
+}
+
+.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: 0 -40px
+}
+
+.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: 0 -56px
+}
+
+.mCSB_scrollTools .mCSB_buttonUp:hover, .mCSB_scrollTools .mCSB_buttonDown:hover, .mCSB_scrollTools .mCSB_buttonLeft:hover, .mCSB_scrollTools .mCSB_buttonRight:hover {
+    opacity: 0.75;
+    filter: "alpha(opacity=75)";
+    -ms-filter: "alpha(opacity=75)"
+}
+
+.mCSB_scrollTools .mCSB_buttonUp:active, .mCSB_scrollTools .mCSB_buttonDown:active, .mCSB_scrollTools .mCSB_buttonLeft:active, .mCSB_scrollTools .mCSB_buttonRight:active {
+    opacity: 0.9;
+    filter: "alpha(opacity=90)";
+    -ms-filter: "alpha(opacity=90)"
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.15)
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75)
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: rgba(0, 0, 0, 0.85)
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -80px 0
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -80px -20px
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -80px -40px
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -80px -56px
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_draggerRail, .mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
+    width: 4px;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 4px;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.75);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px
+}
+
+.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-light-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    width: 100%;
+    height: 4px;
+    margin: 6px auto
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.85)
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-light-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9)
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -32px 0
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -32px -20px
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -40px -40px
+}
+
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -40px -56px
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.85)
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -112px 0
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -112px -20px
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -120px -40px
+}
+
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -120px -56px
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail, .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {
+    width: 4px;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 6px;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.75);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px
+}
+
+.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    width: 100%;
+    height: 4px;
+    margin: 6px 0
+}
+
+.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    width: 100%;
+    height: 6px;
+    margin: 5px auto
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.85)
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9)
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -16px 0
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -16px -20px
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -20px -40px
+}
+
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -20px -56px
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.85)
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -96px 0
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -96px -20px
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -100px -40px
+}
+
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -100px -56px
+}
+
+.mCS-light-thin.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1)
+}
+
+.mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 2px
+}
+
+.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    width: 100%
+}
+
+.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    width: 100%;
+    height: 2px;
+    margin: 7px auto
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.15)
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75)
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.85)
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -80px 0
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -80px -20px
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -80px -40px
+}
+
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -80px -56px
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.15)
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger {
+    height: 14px
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 14px;
+    margin: 0 1px
+}
+
+.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger, .mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger, .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger, .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger {
+    width: 14px
+}
+
+.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    height: 14px;
+    margin: 1px 0
+}
+
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+    width: 16px;
+    height: 16px;
+    margin: -1px 0
+}
+
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+    width: 4px
+}
+
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+    height: 16px;
+    width: 16px;
+    margin: 0 -1px
+}
+
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+    height: 4px;
+    margin: 6px 0
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: 0 -72px
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: 0 -92px
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: 0 -112px
+}
+
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: 0 -128px
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75)
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.15)
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.85)
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -80px -72px
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -80px -92px
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -80px -112px
+}
+
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -80px -128px
+}
+
+.mCS-rounded-dots.mCSB_scrollTools_vertical .mCSB_draggerRail, .mCS-rounded-dots-dark.mCSB_scrollTools_vertical .mCSB_draggerRail {
+    width: 4px
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail, .mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    background-color: transparent;
+    background-position: center
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANElEQVQYV2NkIAAYiVbw//9/Y6DiM1ANJoyMjGdBbLgJQAX/kU0DKgDLkaQAvxW4HEvQFwCRcxIJK1XznAAAAABJRU5ErkJggg==");
+    background-repeat: repeat-y;
+    opacity: 0.3;
+    filter: "alpha(opacity=30)";
+    -ms-filter: "alpha(opacity=30)"
+}
+
+.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    height: 4px;
+    margin: 6px 0;
+    background-repeat: repeat-x
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -16px -72px
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -16px -92px
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -20px -112px
+}
+
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -20px -128px
+}
+
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALElEQVQYV2NkIAAYSVFgDFR8BqrBBEifBbGRTfiPZhpYjiQFBK3A6l6CvgAAE9kGCd1mvgEAAAAASUVORK5CYII=")
+}
+
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -96px -72px
+}
+
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -96px -92px
+}
+
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -100px -112px
+}
+
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -100px -128px
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-repeat: repeat-y;
+    background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%)
+}
+
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%)
+}
+
+.mCS-3d.mCSB_scrollTools_vertical .mCSB_dragger, .mCS-3d-dark.mCSB_scrollTools_vertical .mCSB_dragger {
+    height: 70px
+}
+
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger, .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger {
+    width: 70px
+}
+
+.mCS-3d.mCSB_scrollTools, .mCS-3d-dark.mCSB_scrollTools {
+    opacity: 1;
+    filter: "alpha(opacity=30)";
+    -ms-filter: "alpha(opacity=30)"
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_draggerRail, .mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail, .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_draggerRail, .mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail {
+    width: 8px;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.5), inset -1px 0 1px rgba(255, 255, 255, 0.2)
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, .mCS-3d.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-3d.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #555
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 8px
+}
+
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    width: 100%;
+    height: 8px;
+    margin: 4px 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), inset 0 -1px 1px rgba(255, 255, 255, 0.2)
+}
+
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    width: 100%;
+    height: 8px;
+    margin: 4px auto
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -32px -72px
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -32px -92px
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -40px -112px
+}
+
+.mCS-3d.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -40px -128px
+}
+
+.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.1)
+}
+
+.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1)
+}
+
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -112px -72px
+}
+
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -112px -92px
+}
+
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -120px -112px
+}
+
+.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -120px -128px
+}
+
+.mCS-3d-thick.mCSB_scrollTools, .mCS-3d-thick-dark.mCSB_scrollTools {
+    opacity: 1;
+    filter: "alpha(opacity=30)";
+    -ms-filter: "alpha(opacity=30)"
+}
+
+.mCS-3d-thick.mCSB_scrollTools, .mCS-3d-thick-dark.mCSB_scrollTools, .mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer, .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer {
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px
+}
+
+.mCSB_inside + .mCS-3d-thick.mCSB_scrollTools_vertical, .mCSB_inside + .mCS-3d-thick-dark.mCSB_scrollTools_vertical {
+    right: 1px
+}
+
+.mCS-3d-thick.mCSB_scrollTools_vertical, .mCS-3d-thick-dark.mCSB_scrollTools_vertical {
+    box-shadow: inset 1px 0 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.5)
+}
+
+.mCS-3d-thick.mCSB_scrollTools_horizontal, .mCS-3d-thick-dark.mCSB_scrollTools_horizontal {
+    bottom: 1px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.5)
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4);
+    width: 12px;
+    margin: 2px;
+    position: absolute;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4)
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #555
+}
+
+.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    height: 12px;
+    width: auto
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.1)
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: transparent
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -32px -72px
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -32px -92px
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -40px -112px
+}
+
+.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -40px -128px
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools {
+    box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.2)
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), inset 0 0 14px rgba(0, 0, 0, 0.2)
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4), inset -1px 0 0 rgba(0, 0, 0, 0.2)
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.2)
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #777
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer {
+    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: inset 1px 1px 16px rgba(0, 0, 0, 0.1)
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: transparent
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -112px -72px
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -112px -92px
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -120px -112px
+}
+
+.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -120px -128px
+}
+
+.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical {
+    right: 0;
+    margin: 12px 0
+}
+
+.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal, .mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal {
+    bottom: 0;
+    margin: 0 12px
+}
+
+.mCS-dir-rtl > .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, .mCS-dir-rtl > .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical {
+    left: 0;
+    right: auto
+}
+
+.mCS-minimal.mCSB_scrollTools .mCSB_draggerRail, .mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: transparent
+}
+
+.mCS-minimal.mCSB_scrollTools_vertical .mCSB_dragger, .mCS-minimal-dark.mCSB_scrollTools_vertical .mCSB_dragger {
+    height: 50px
+}
+
+.mCS-minimal.mCSB_scrollTools_horizontal .mCSB_dragger, .mCS-minimal-dark.mCSB_scrollTools_horizontal .mCSB_dragger {
+    width: 50px
+}
+
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    filter: "alpha(opacity=20)";
+    -ms-filter: "alpha(opacity=20)"
+}
+
+.mCS-minimal.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-minimal.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+    filter: "alpha(opacity=50)";
+    -ms-filter: "alpha(opacity=50)"
+}
+
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.2);
+    filter: "alpha(opacity=20)";
+    -ms-filter: "alpha(opacity=20)"
+}
+
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: "alpha(opacity=50)";
+    -ms-filter: "alpha(opacity=50)"
+}
+
+.mCS-light-3.mCSB_scrollTools .mCSB_draggerRail, .mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail {
+    width: 6px;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+.mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 6px
+}
+
+.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-light-3.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    width: 100%;
+    height: 6px;
+    margin: 5px 0
+}
+
+.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, .mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+    width: 12px
+}
+
+.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, .mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, .mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+    height: 12px;
+    margin: 2px 0
+}
+
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -32px -72px
+}
+
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -32px -92px
+}
+
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -40px -112px
+}
+
+.mCS-light-3.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -40px -128px
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75)
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.85)
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -112px -72px
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -112px -92px
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -120px -112px
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -120px -128px
+}
+
+.mCS-inset.mCSB_scrollTools .mCSB_draggerRail, .mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail, .mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail, .mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail {
+    width: 12px;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+.mCS-inset.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    width: 6px;
+    margin: 3px 5px;
+    position: absolute;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.mCS-inset.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+    height: 6px;
+    margin: 5px 3px;
+    position: absolute;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.mCS-inset.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_draggerRail, .mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+    width: 100%;
+    height: 12px;
+    margin: 2px 0
+}
+
+.mCS-inset.mCSB_scrollTools .mCSB_buttonUp, .mCS-inset-2.mCSB_scrollTools .mCSB_buttonUp, .mCS-inset-3.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -32px -72px
+}
+
+.mCS-inset.mCSB_scrollTools .mCSB_buttonDown, .mCS-inset-2.mCSB_scrollTools .mCSB_buttonDown, .mCS-inset-3.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -32px -92px
+}
+
+.mCS-inset.mCSB_scrollTools .mCSB_buttonLeft, .mCS-inset-2.mCSB_scrollTools .mCSB_buttonLeft, .mCS-inset-3.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -40px -112px
+}
+
+.mCS-inset.mCSB_scrollTools .mCSB_buttonRight, .mCS-inset-2.mCSB_scrollTools .mCSB_buttonRight, .mCS-inset-3.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -40px -128px
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75)
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.85)
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-inset-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonUp, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonUp, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonUp {
+    background-position: -112px -72px
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonDown, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonDown, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonDown {
+    background-position: -112px -92px
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonLeft, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonLeft, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonLeft {
+    background-position: -120px -112px
+}
+
+.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonRight, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonRight, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonRight {
+    background-position: -120px -128px
+}
+
+.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail, .mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail {
+    border-color: #000;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.6)
+}
+
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.6)
+}
+
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75)
+}
+
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.85)
+}
+
+.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-inset-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9)
+}
+
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.75)
+}
+
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.85)
+}
+
+.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9)
+}
+
+.bx-wrapper {
+    position: relative;
+    margin: 0 auto 60px;
+    padding: 0;
+    *zoom: 1
+}
+
+.bx-wrapper img {
+    max-width: 100%;
+    display: block
+}
+
+.bx-wrapper .bx-viewport {
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0)
+}
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: -30px;
+    width: 100%
+}
+
+.bx-wrapper .bx-loading {
+    min-height: 50px;
+    background: url(http://mamovediya.com.ua/assets/bx_loader-61de1b75b47afa889872abbd2dbd9d7e.gif) center center no-repeat #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000
+}
+
+.bx-wrapper .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px
+}
+
+.bx-wrapper .bx-pager .bx-pager-item, .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #666;
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #000
+}
+
+.bx-wrapper .bx-prev {
+    left: 10px;
+    background: url(http://mamovediya.com.ua/assets/controls-d49b0de76a0d5199b66be5315d77ce50.png) no-repeat 0 -32px
+}
+
+.bx-wrapper .bx-next {
+    right: 10px;
+    background: url(http://mamovediya.com.ua/assets/controls-d49b0de76a0d5199b66be5315d77ce50.png) no-repeat -43px -32px
+}
+
+.bx-wrapper .bx-prev:hover {
+    background-position: 0 0
+}
+
+.bx-wrapper .bx-next:hover {
+    background-position: -43px 0
+}
+
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+    display: none
+}
+
+.bx-wrapper .bx-controls-auto {
+    text-align: center
+}
+
+.bx-wrapper .bx-controls-auto .bx-start {
+    display: block;
+    text-indent: -9999px;
+    width: 10px;
+    height: 11px;
+    outline: 0;
+    background: url(http://mamovediya.com.ua/assets/controls-d49b0de76a0d5199b66be5315d77ce50.png) -86px -11px no-repeat;
+    margin: 0 3px
+}
+
+.bx-wrapper .bx-controls-auto .bx-start:hover, .bx-wrapper .bx-controls-auto .bx-start.active {
+    background-position: -86px 0
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop {
+    display: block;
+    text-indent: -9999px;
+    width: 9px;
+    height: 11px;
+    outline: 0;
+    background: url(http://mamovediya.com.ua/assets/controls-d49b0de76a0d5199b66be5315d77ce50.png) -86px -44px no-repeat;
+    margin: 0 3px
+}
+
+.bx-wrapper .bx-controls-auto .bx-stop:hover, .bx-wrapper .bx-controls-auto .bx-stop.active {
+    background-position: -86px -33px
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: left;
+    width: 80%
+}
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    right: 0;
+    width: 35px
+}
+
+.bx-wrapper .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666 \9;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%
+}
+
+.bx-wrapper .bx-caption span {
+    color: #fff;
+    font-family: Arial;
+    display: block;
+    font-size: .85em;
+    padding: 10px
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url(../fonts/Roboto/RobotoLight.eot);
+    src: url(../fonts/Roboto/RobotoLight.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/Roboto/RobotoLight.woff) format("woff"),
+    url(../fonts/Roboto/RobotoLight.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url(../fonts/Roboto/RobotoBold.eot);
+    src: url(../fonts/Roboto/RobotoBold.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/Roboto/RobotoBold.woff) format("woff"),
+    url(../fonts/Roboto/RobotoBold.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url(../fonts/Roboto/RobotoRegular.eot);
+    src: url(../fonts/Roboto/RobotoRegular.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/Roboto/RobotoRegular.woff) format("woff"),
+    url(../fonts/Roboto/RobotoRegular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Roboto Black";
+    src: url(../fonts/Roboto/RobotoBlack.eot?) format("eot"),
+    url(../fonts/Roboto/RobotoBlack.woff) format("woff"),
+    url(../fonts/Roboto/RobotoBlack.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+
+@font-face {
+    font-family: 'roboto_condensedlight';
+    src: url(../fonts/RobotoCondensed/RobotoCondensed-Light.eot);
+    src: url(../fonts/RobotoCondensed/RobotoCondensed-Light.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/RobotoCondensed/RobotoCondensed-Light.woff) format("woff"),
+    url(../fonts/RobotoCondensed/RobotoCondensed-Light.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'roboto_condensedbold';
+    src: url(../fonts/RobotoCondensed/RobotoCondensed-Bold.eot);
+    src: url(../fonts/RobotoCondensed/RobotoCondensed-Bold.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/RobotoCondensed/RobotoCondensed-Bold.woff) format("woff"),
+    url(../fonts/RobotoCondensed/RobotoCondensed-Bold.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'roboto_condensedregular';
+    src: url(../fonts/RobotoCondensed/RobotoCondensed-Regular.eot);
+    src: url(../fonts/RobotoCondensed/RobotoCondensed-Regular.eot?#iefix) format("embedded-opentype"),
+    url(../fonts/RobotoCondensed/RobotoCondensed-Regular.woff) format("woff"),
+    url(../fonts/RobotoCondensed/RobotoCondensed-Regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+html {
+    height: 100%
+}
+
+body {
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    background: #fff
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+a {
+    color: #204daa;
+    display: inline-block;
+    text-decoration: none
+}
+
+h1 {
+    color: #000000;
+    font-size: 40px;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    font-weight: normal;
+    margin-bottom: 25px
+}
+
+h2 {
+    display: inline-block;
+    font-size: 40px;
+    color: #ea3c92;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    font-weight: normal;
+    position: relative;
+    padding-right: 30px
+}
+
+h3 {
+    font-size: 20px;
+    color: #202020;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif;
+    margin-bottom: 15px;
+    font-weight: normal
+}
+
+h4 {
+    font-size: 20px;
+    color: #3b3a3a;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    font-weight: normal
+}
+
+p {
+    color: #5d5d5d;
+    font-size: 15px;
+    line-height: 22px;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    margin-bottom: 25px
+}
+
+b, strong {
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif;
+    color: #202020
+}
+
+i {
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    font-style: italic
+}
+
+table {
+    width: 100%
+}
+
+table thead tr th {
+    font-size: 16px;
+    line-height: 26px;
+    color: #171715;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    padding: 20px 15px;
+    text-align: left;
+    border-top: #ebebeb solid 1px;
+    border-left: #ebebeb solid 1px
+}
+
+table thead tr th:first-child {
+    border-left: 0
+}
+
+table tbody tr td {
+    font-size: 15px;
+    line-height: 22px;
+    color: #5d5d5d;
+    padding: 20px 15px;
+    text-align: left;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    border-bottom: #ebebeb solid 1px;
+    border-left: #ebebeb solid 1px
+}
+
+table tbody tr td:first-child {
+    border-left: 0
+}
+
+table tbody tr:first-child td {
+    border-top: #ebebeb solid 1px
+}
+
+ol li {
+    list-style-type: none
+}
+
+ol {
+    counter-reset: list1
+}
+
+ol li:before {
+    counter-increment: list1;
+    content: counter(list1) ". "
+}
+
+ol ol {
+    counter-reset: list2
+}
+
+ol ol li:before {
+    counter-increment: list2;
+    content: counter(list1) "." counter(list2) ". "
+}
+
+ol > li {
+    font-size: 20px;
+    color: #202020;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 40px
+}
+
+ol > li > ol > li {
+    color: #5d5d5d;
+    font-size: 15px;
+    line-height: 22px;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    margin-bottom: 25px;
+    text-transform: none;
+    margin-top: 20px
+}
+
+.wrapper {
+    width: 980px;
+    margin: 0 auto
+}
+
+.clearfix:after {
+    display: block;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+    content: " ";
+    clear: both
+}
+
+header {
+    padding-top: 22px
+}
+
+.logo {
+    float: left;
+    width: 324px;
+    margin-top: 8px
+}
+
+.logo a {
+    display: block;
+    width: 324px;
+    height: 74px
+}
+
+.rh_block {
+    float: right;
+    width: 485px
+}
+
+.lang {
+    text-align: right
+}
+
+.lang ul li {
+    display: inline-block;
+    font-family: 'robotobold';
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 3px
+}
+
+.lang ul li a {
+    color: #eb3d93
+}
+
+.lang ul li span {
+    color: #423b3a
+}
+
+.h_search {
+    margin-top: 25px
+}
+
+.serch_content {
+    position: relative
+}
+
+.h_search input[type="text"] {
+    width: 230px;
+    height: 37px;
+    border: none;
+    padding: 0 140px 0 40px;
+    outline: none;
+    float: left;
+    border: #9e9e9e solid 1px;
+    -moz-border-radius: 3px / 2px;
+    -webkit-border-radius: 3px / 2px;
+    border-radius: 3px / 2px;
+    position: relative;
+    font-size: 14px;
+    color: #353535;
+    background: #fff url(http://mamovediya.com.ua/assets/lupa_icon-6d0c85c400841ec36abcb93e31c99014.png) no-repeat 15px center
+}
+
+.h_search input[type="submit"] {
+    background: #eb3d93;
+    border: transparent solid 1px;
+    height: 39px;
+    position: absolute;
+    padding: 0 20px;
+    right: 0;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    margin: 0
+}
+
+/*Changed*/
+/*.header_bottom {*/
+    /*margin-top: 35px*/
+/*}*/
+
+/*.header_bottom ul {*/
+    /*text-align: center*/
+/*}*/
+
+/*.header_bottom ul li {*/
+    /*display: inline-block;*/
+    /*padding: 0 17px;*/
+    /*border-left: #020202 solid 2px*/
+/*}*/
+
+/*.header_bottom ul li:first-child {*/
+    /*border-left: 0*/
+/*}*/
+
+/*.header_bottom ul li a {*/
+    /*font-size: 15px;*/
+    /*color: #020202;*/
+    /*text-transform: uppercase;*/
+    /*font-family: 'roboto_condensedbold', Tahoma, sans-serif*/
+/*}*/
+
+/*.header_bottom ul li:hover a, .header_bottom ul li.active a {*/
+    /*color: #eb3d93*/
+/*}*/
+/*************************************************/
+.main {
+    margin-top: 40px;
+    padding-bottom: 360px
+}
+
+.main section {
+    margin-top: 40px
+}
+
+.main section:first-child {
+    margin-top: 0
+}
+
+.left_art {
+    float: left;
+    width: 640px
+}
+
+.right_art {
+    float: right;
+    width: 300px
+}
+
+.new_art h2:before {
+    content: '';
+    background: url(http://mamovediya.com.ua/assets/new_art_icon-3f28bff22e19e5c048b109c962adc339.png) no-repeat;
+    width: 13px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.art_content {
+    margin-top: 35px
+}
+
+.top_art {
+    position: relative
+}
+
+.img_art {
+    display: block;
+    position: relative
+}
+
+.top_art .text_art {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 25px
+}
+
+.top_art .text_art span {
+    display: block
+}
+
+.text_art .subtitle, .subtitle a {
+    color: #949494;
+    font-size: 11px;
+    text-transform: uppercase
+}
+
+.subtitle a:hover {
+    text-decoration: underline
+}
+
+.top_art .subtitle {
+    color: #fff
+}
+
+.top_art .text_art .title_art {
+    font-size: 32px;
+    line-height: 33px;
+    color: #ffffff;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    margin-top: 10px
+}
+
+.info_block {
+    margin-top: 12px
+}
+
+.top_art .info_block > span, .info_block > div {
+    display: inline-block;
+    color: #fff;
+    font-size: 11px;
+    padding-left: 20px;
+    position: relative;
+    margin-left: 15px
+}
+
+.info_block > span:first-child, .info_block > div:first-child {
+    margin-left: 0
+}
+
+.review div {
+    color: #eb3d93
+}
+
+.comment div {
+    color: #204daa
+}
+
+.review:before {
+    content: '';
+    background: url(http://mamovediya.com.ua/assets/info_sprite-c02a53b664c9d4f10a0fd3f03d702091.png) no-repeat 0 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 17px;
+    height: 10px;
+    margin-top: -5px
+}
+
+.comment:before {
+    content: '';
+    background: url(http://mamovediya.com.ua/assets/info_sprite-c02a53b664c9d4f10a0fd3f03d702091.png) no-repeat -17px 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 15px;
+    height: 12px;
+    margin-top: -5px
+}
+
+.des_art {
+    margin-top: 15px
+}
+
+.art_col {
+    float: left;
+    width: 300px;
+    margin-left: 35px
+}
+
+.art_col:first-child {
+    margin-left: 0
+}
+
+.art_item {
+    margin-top: 25px
+}
+
+.prev_art {
+    float: left;
+    width: 61px;
+    margin-right: 13px
+}
+
+.art_item .text_art {
+    overflow: hidden;
+    padding-bottom: 17px;
+    border-bottom: #ebebeb solid 1px
+}
+
+.art_item:last-child .text_art {
+    border-bottom: 0
+}
+
+.name_art {
+    margin: 10px 0
+}
+
+.name_art a {
+    font-size: 14px;
+    line-height: 19px;
+    color: #171715;
+    font-family: 'robotobold', Tahoma, sans-serif
+}
+
+.name_art a:hover {
+    color: #eb3d93
+}
+
+.banner_left {
+    padding: 30px
+}
+
+.banner_left a {
+    display: block;
+    width: 240px;
+    height: 350px;
+    line-height: 350px;
+    text-align: center;
+    overflow: hidden
+}
+
+.banner_left a img {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle
+}
+
+.fb_plagin {
+    margin-top: 40px
+}
+
+.popular_box h2:before {
+    content: '';
+    background: url(http://mamovediya.com.ua/assets/popular_icon-f9575bdc254a6fda5e055b2bfe2382c2.png) no-repeat;
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.hot_block {
+    background: #204daa url(http://mamovediya.com.ua/assets/bg_block-a085d9b4f1cce83ce5d1cef8c8c9e03e.png);
+    padding: 35px 0
+}
+
+.hot_name {
+    float: left;
+    width: 300px;
+    font-size: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-family: 'robotolight', Tahoma, sans-serif;
+    margin-top: 30px
+}
+
+.more_art {
+    display: inline-block;
+    height: 37px;
+    border: #fff solid 2px;
+    border-radius: 25px;
+    padding: 0 25px;
+    line-height: 29px;
+    margin-top: 35px
+}
+
+.more_art span {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #fff;
+    position: relative;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    padding-left: 10px;
+    text-transform: uppercase
+}
+
+.more_art span:before {
+    content: '';
+    background: url(http://mamovediya.com.ua/assets/arrow_link-36bf608a3134055b3eccc6669d2ef18e.png) no-repeat;
+    width: 6px;
+    height: 9px;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    margin-top: -4px
+}
+
+.hot_list {
+    float: left;
+    width: 655px;
+    margin-left: 20px
+}
+
+.list_col {
+    float: left;
+    width: 315px;
+    margin-left: 25px
+}
+
+.list_col:first-child {
+    margin-left: 0
+}
+
+.list_col ul li a {
+    font-size: 19px;
+    line-height: 32px;
+    color: #fff;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif
+}
+
+.list_col ul li a span {
+    font-family: 'roboto_condensedlight';
+    font-size: 14px;
+    color: #93ade3;
+    display: inline-block;
+    margin-left: 15px
+}
+
+.popular_row {
+    margin-top: 50px
+}
+
+.popular_tab {
+    float: left;
+    width: 640px
+}
+
+.popular_tab .tab {
+    border: #204daa solid 6px
+}
+
+.popular_tab .tab_pager {
+    width: 100%
+}
+
+.popular_tab .tab_pager ul li {
+    float: left;
+    width: 50%;
+    background: #204daa;
+    text-align: center
+}
+
+.popular_tab .tab_pager ul li.active {
+    background: #fff
+}
+
+.popular_tab .tab_pager ul li a {
+    display: block;
+    width: 100%;
+    height: 39px;
+    line-height: 39px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.popular_tab .tab_pager ul li.active a {
+    background: #fff;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    color: #204daa
+}
+
+.popular_tab .tab_content {
+    background: #fff;
+    position: relative
+}
+
+.popular_tab .tab_des1 {
+    padding: 33px 10px 30px 33px;
+    position: relative
+}
+
+.direction ul li {
+    color: #666666;
+    font-size: 16px;
+    line-height: 34px
+}
+
+.ask {
+    margin-top: 30px
+}
+
+.decor a {
+    display: inline-block;
+    border: #204daa solid 2px;
+    padding: 13px 20px 14px;
+    border-radius: 25px
+}
+
+.decor a span {
+    color: #171715;
+    font-size: 14px;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    text-transform: uppercase;
+    position: relative
+}
+
+.name_special {
+    width: 310px;
+    font-size: 10px;
+    line-height: 16px;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    color: #666666;
+    text-align: right;
+    margin: 20px 0
+}
+
+.name_special span {
+    color: #171715;
+    display: block
+}
+
+.spec_foto {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 275px;
+    height: 265px
+}
+
+.popular_slide {
+    float: right;
+    width: 300px
+}
+
+.ps_content {
+    border: #e2338a solid 6px;
+    padding: 25px 20px
+}
+
+.link_row ul li {
+    margin-top: 15px;
+    padding-left: 20px;
+    background: url(http://mamovediya.com.ua/assets/aktual_arrow-7a115000478a2fb96b8004548ad65892.png) no-repeat left 6px
+}
+
+.link_row ul li a {
+    display: block;
+    font-size: 14px;
+    color: #5d5d5d;
+    line-height: normal
+}
+
+.title_slide {
+    font-size: 24px;
+    color: #171715;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    margin-bottom: 10px
+}
+
+.ps_content .bx-wrapper .bx-pager {
+    text-align: left;
+    bottom: -70px
+}
+
+.ps_content .bx-wrapper .bx-pager.bx-default-pager a {
+    background: #c9c9c9;
+    width: 10px;
+    height: 10px;
+    border: #fff solid 2px;
+    border-radius: 50%;
+    margin: 0 2px
+}
+
+.ps_content .bx-wrapper .bx-pager.bx-default-pager a:hover, .ps_content .bx-wrapper .bx-pager.bx-default-pager a.active {
+    border-color: #e3398d;
+    background: #fff
+}
+
+.article_section.sect1 h2:before {
+    content: '';
+    background: url(http://mamovediya.com.ua/assets/art_sec1-6ebeed9375bb011cb8406b038e4baa67.png) no-repeat;
+    width: 24px;
+    height: 27px;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.title_section h2 {
+    float: left
+}
+
+.title_section .link_r {
+    float: right
+}
+
+.title_section .link_r a {
+    border: #dadada solid 1px
+}
+
+.title_section .link_r a span {
+    font-size: 12px;
+    color: #ea3c92;
+    position: relative;
+    padding-left: 15px
+}
+
+.title_section .link_r a span:before {
+    content: '>';
+    color: #ea3c92;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    left: 0px;
+    top: 0px
+}
+
+.big_foto {
+    position: relative
+}
+
+.art_foto {
+    width: 300px;
+    height: 145px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border-radius: 3px
+}
+
+.big_foto .subtitle {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2
+}
+
+.big_foto .subtitle a {
+    background: #fff;
+    font-size: 12px;
+    padding: 3px 10px 2px 0;
+    border-radius: 0 3px 0 0
+}
+
+.article_section.sect2 h2:before {
+    content: '';
+    background: url(http://mamovediya.com.ua/assets/art_sec2-6da4889eec8c6f86c750e0681cfe653c.png) no-repeat;
+    width: 26px;
+    height: 22px;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.info_slider {
+    background: #ea3d93 url(http://mamovediya.com.ua/assets/bg_block-a085d9b4f1cce83ce5d1cef8c8c9e03e.png);
+    padding: 25px 0
+}
+
+.wrapp_slider {
+    width: 600px;
+    margin: 0 auto
+}
+
+.info_slider .title_slide {
+    float: left;
+    width: 210px;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    line-height: 25px;
+    margin-top: 40px
+}
+
+.content_slide {
+    float: left;
+    width: 380px;
+    margin-left: 10px
+}
+
+.table_week table {
+    width: 100%
+}
+
+.table_week table thead th {
+    font-size: 16px;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    color: #fff;
+    height: 35px;
+    vertical-align: middle;
+    padding: 0;
+    border: 0
+}
+
+.table_week table td {
+    height: 30px;
+    width: 10%;
+    vertical-align: middle;
+    padding: 0;
+    line-height: normal;
+    border: 0
+}
+
+.table_week table tr:first-child td {
+    border: 0
+}
+
+.table_week table td a {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    color: #fff;
+    font-family: "Roboto Black", Tahoma, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center
+}
+
+.table_week table td.active a, .table_week table td:hover a {
+    border-radius: 50%;
+    background: #ffffff;
+    color: #ea3d93
+}
+
+.wrapp_slider .bx-wrapper {
+    margin: 0 auto 0
+}
+
+.wrapp_slider .bx-wrapper .bx-pager {
+    text-align: left;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 0px;
+    position: absolute;
+    bottom: 20px;
+    width: 215px
+}
+
+.wrapp_slider .bx-wrapper .bx-pager.bx-default-pager a {
+    background: #f292c2;
+    width: 10px;
+    height: 10px;
+    border: #ea3d93 solid 2px;
+    border-radius: 50%;
+    margin: 0 2px
+}
+
+.wrapp_slider .bx-wrapper .bx-pager.bx-default-pager a:hover, .wrapp_slider .bx-wrapper .bx-pager.bx-default-pager a.active {
+    border-color: #fff;
+    background: #ea3d93
+}
+
+.item_sc {
+    float: left;
+    width: 160px;
+    margin-left: 40px
+}
+
+.item_sc:first-child {
+    margin-left: 0
+}
+
+.content_slide .form_row {
+    margin-top: 30px
+}
+
+.item_sc > div {
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 10px
+}
+
+.content_slide .form_row input[type="text"] {
+    width: 120px;
+    height: 40px;
+    border: 0;
+    background: #fff;
+    padding: 0 10px;
+    font-size: 13px;
+    color: #353535;
+    outline: none
+}
+
+.content_slide .form_row input[type="submit"] {
+    width: 90px;
+    height: 40px;
+    outline: none;
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+    color: #ea3d93;
+    font-size: 13px
+}
+
+.castom_check input[type="checkbox"] {
+    display: none
+}
+
+.castom_check input[type="checkbox"] + label {
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer
+}
+
+.castom_check input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+    background-image: url(http://mamovediya.com.ua/assets/check_slide-675e68f5935e4b7b6ac4ba3b32e0f528.png);
+    background-repeat: no-repeat
+}
+
+.castom_check input[type="checkbox"] + label::before {
+    background-position: -41px 0px
+}
+
+.castom_check input[type="checkbox"]:checked + label::before {
+    background-position: 0px 0px
+}
+
+.castom_check input[type="submit"] {
+    width: 80px;
+    height: 40px;
+    outline: none;
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+    color: #ea3d93;
+    font-size: 13px
+}
+
+.check_slide {
+    margin-top: 40px
+}
+
+.check_slide li {
+    float: left;
+    width: 135px;
+    margin-left: 15px
+}
+
+.check_slide > div {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px
+}
+
+.check_slide li:nth-child(3) {
+    width: 80px
+}
+
+.check_slide li:first-child {
+    margin-left: 0
+}
+
+.banner_bottom {
+    margin: 25px 0;
+    padding: 25px 0;
+    text-align: center
+}
+
+.banner_bottom a {
+    width: 970px;
+    height: 90px;
+    line-height: 90px
+}
+
+.banner_bottom a img {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle
+}
+
+footer {
+    background: #204daa;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    bottom: 0
+}
+
+.footer_bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 46px;
+    background: #ea3c92
+}
+
+.copy_w {
+    float: left;
+    width: 50%;
+    font-size: 14px;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif;
+    line-height: 46px;
+    color: #fff
+}
+
+.devel {
+    float: right;
+    width: 76px;
+    height: 44px;
+    margin-top: 1px
+}
+
+.devel a {
+    display: block;
+    background: url(http://mamovediya.com.ua/assets/studio7_logo-f304e59fc71e2c4b21eeac094693666c.png) no-repeat;
+    width: 76px;
+    height: 44px
+}
+
+.footer_col {
+    float: left;
+    width: 300px;
+    margin-left: 39px
+}
+
+.footer_col:first-child {
+    margin-left: 0
+}
+
+.footer_col > ul li a {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    line-height: 28px
+}
+
+.footer_row {
+    margin-top: 35px
+}
+
+.social_footer {
+    width: 230px;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: #4a6fba solid 1px
+}
+
+.social_footer > div {
+    font-size: 13px;
+    color: #fff;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif
+}
+
+.social_footer ul {
+    margin-top: 10px
+}
+
+.social_footer ul li {
+    float: left;
+    margin-left: 10px
+}
+
+.social_footer ul li:first-child {
+    margin-left: 0
+}
+
+.social_footer ul li a {
+    display: block;
+    width: 46px;
+    height: 45px;
+    background: url(http://mamovediya.com.ua/assets/social_icon_f-808ddd79532a7dde0cca4b486f95c2d2.png) no-repeat
+}
+
+.social_footer ul li.fb a {
+    background-position: 0 0
+}
+
+.social_footer ul li.tw a {
+    background-position: -46px 0
+}
+
+.social_footer ul li.od a {
+    background-position: -93px 0
+}
+
+.social_footer ul li.vk a {
+    background-position: -139px 0
+}
+
+.subscribe_form .form_row label {
+    color: #fff;
+    font-size: 13px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.subscribe_form .form_row input[type="text"] {
+    width: 270px;
+    height: 33px;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 0 10px;
+    outline: none
+}
+
+.done select {
+    height: 1px;
+    width: 1px;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: -2px;
+    z-index: -10;
+    outline: none;
+    -webkit-appearance: none
+}
+
+.select-list {
+    position: absolute;
+    left: 0
+}
+
+.custom-select {
+    z-index: 1
+}
+
+.custom-select * {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none
+}
+
+.open_list {
+    z-index: 10
+}
+
+.custom-select ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.custom-select li {
+    margin: 0 !important;
+    padding: 0;
+    list-style: none
+}
+
+.custom-select, .custom-select ul {
+    position: relative;
+    top: 0;
+    left: 0
+}
+
+.custom-select .custom-text {
+    cursor: pointer;
+    display: inline-block
+}
+
+.custom-select li {
+    cursor: pointer
+}
+
+.select-scroll {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    z-index: 2
+}
+
+.default-scroll ul {
+    overflow-y: scroll
+}
+
+.custom-scroll {
+    overflow: hidden
+}
+
+.scroll-drag {
+    display: block;
+    position: absolute;
+    left: 1px;
+    cursor: pointer
+}
+
+.disabled * {
+    cursor: default !important
+}
+
+.custom-select {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px
+}
+
+.subscribe_form .custom-select .custom-text, .custom-select.disabled span.custom-text:hover {
+    background: #204daa;
+    border: #fff solid 1px
+}
+
+.custom-select .custom-text, .custom-select.disabled span.custom-text:hover {
+    overflow: hidden;
+    height: 36px;
+    padding: 0 0px 0 10px;
+    line-height: 40px;
+    color: #fff;
+    border: #fff solid 1px;
+    background: #fff;
+    position: relative
+}
+
+.custom-select .custom-text:after {
+    background: #f9f9f9 url(http://mamovediya.com.ua/assets/arrow_select-c2d9941c70dceab276ed9ab2516bbf4d.png) no-repeat 0px 0px;
+    font-size: 13px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    display: block;
+    content: '1';
+    color: #ffffff;
+    float: right;
+    width: 38px;
+    height: 38px;
+    z-index: 2;
+    text-indent: -999px
+}
+
+.active span.custom-text:after {
+    background: #f9f9f9 url(http://mamovediya.com.ua/assets/arrow_select-c2d9941c70dceab276ed9ab2516bbf4d.png) no-repeat 0px -38px
+}
+
+.select-list {
+    top: 42px;
+    line-height: 25px;
+    padding: 0 0 0 10px;
+    background-color: #fff;
+    color: #999;
+    border: 1px solid #b0b0b0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3)
+}
+
+.select-list .selected, .select-list li:hover {
+    color: #000
+}
+
+.select-list li.disabled {
+    color: #999;
+    cursor: default
+}
+
+.select-scroll {
+    margin-right: 5px;
+    background-color: #f4f4f4;
+    width: 6px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px
+}
+
+.scroll-drag {
+    top: 0;
+    width: 6px;
+    background-color: #ff8a65;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px
+}
+
+.maxlength .scroll-drag:after {
+    display: block;
+    font-size: 14px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin: -14px 0 0 -4px
+}
+
+.custom-select .hover {
+    color: #fff
+}
+
+.custom-select.disabled {
+    opacity: 0.5 !important
+}
+
+.subscribe_form .form_row.select {
+    margin: 15px 0
+}
+
+.form_row.subm input[type="submit"] {
+    height: 30px;
+    outline: none;
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+    color: #ea3d93;
+    font-size: 13px;
+    padding: 0 15px
+}
+
+.page_error {
+    width: 690px;
+    margin: 0 auto;
+    position: relative
+}
+
+.error_text {
+    font-size: 24px;
+    color: #020202;
+    line-height: 26px;
+    position: absolute;
+    top: 135px;
+    left: 0
+}
+
+.error_text span {
+    display: block;
+    color: #eb3d93;
+    font-size: 48px;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    margin-bottom: 25px
+}
+
+.error_img {
+    float: right
+}
+
+.link_home {
+    margin-top: 60px
+}
+
+.link_home a {
+    display: inline-block;
+    color: #fff;
+    background: #eb3d93;
+    -moz-border-radius: 1px / 2px;
+    -webkit-border-radius: 1px / 2px;
+    border-radius: 1px / 2px;
+    padding: 7px 15px;
+    font-size: 12px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.about_block {
+    padding-top: 25px;
+    border-top: #ebebeb solid 1px;
+    width: 635px
+}
+
+.ui-datepicker {
+    background: #204daa;
+    padding: 0px;
+    width: 210px;
+    -moz-box-shadow: 0 3px 15px rgba(0, 2, 6, 0.2);
+    -webkit-box-shadow: 0 3px 15px rgba(0, 2, 6, 0.2);
+    box-shadow: 0 3px 15px rgba(0, 2, 6, 0.2)
+}
+
+.ui-datepicker .ui-datepicker-header {
+    padding: 0
+}
+
+.ui-datepicker .ui-datepicker-title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+    color: #fff
+}
+
+.ui-datepicker .ui-datepicker-calendar {
+    background: #fbfbfb;
+    margin-bottom: 0
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+    display: inline-block;
+    font-size: 13px;
+    color: #3b3a3a;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px
+}
+
+.ui-datepicker td.ui-datepicker-today a, .ui-datepicker td a.ui-state-active {
+    background: #e9e9e9
+}
+
+.ui-datepicker td {
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif
+}
+
+.ui-datepicker-calendar thead tr {
+    background: #e9e9e9
+}
+
+.ui-datepicker-calendar thead tr td {
+    font-size: 13px;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+    background: url(http://mamovediya.com.ua/assets/arrow_calendar-684744a8395843e1821f86843f029479.png) no-repeat;
+    width: 7px;
+    height: 13px;
+    cursor: pointer
+}
+
+.ui-datepicker .ui-datepicker-prev {
+    left: 12px;
+    top: 16px
+}
+
+.ui-datepicker .ui-datepicker-prev span {
+    background-position: 0px 0px
+}
+
+.ui-datepicker .ui-datepicker-next {
+    right: 12px;
+    top: 16px
+}
+
+.ui-datepicker .ui-datepicker-next span {
+    background-position: -17px 0
+}
+
+.ui-datepicker .ui-datepicker-prev-hover {
+    left: 12px
+}
+
+.ui-datepicker .ui-datepicker-next-hover {
+    right: 12px
+}
+
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {
+    top: 16px
+}
+
+.header_bottom .min_menu {
+    position: relative;
+    float: left;
+    z-index: 2
+}
+
+.hide_menu {
+    display: none;
+    width: 100%
+}
+
+.name_sect {
+    font-size: 16px;
+    color: #020202;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    padding: 10px 15px 10px 45px
+}
+
+.name_sect:before {
+    content: '';
+    background: url(http://mamovediya.com.ua/assets/menu_icon-80dbce4f23e08cb7b1256b5dc2647531.png) no-repeat;
+    width: 25px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    margin-top: -7px
+}
+
+.name_sect.active {
+    color: #fff
+}
+
+.name_sect.active:before {
+    background-position: 0 -16px
+}
+
+.hide_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #eb3d93;
+    padding: 30px 15px 15px 15px
+}
+
+.min_menu .hide_menu ul li {
+    display: block;
+    border-left: 0;
+    text-align: left;
+    padding: 0
+}
+
+.min_menu .hide_menu ul li a {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    text-transform: none;
+    line-height: 30px
+}
+
+.np_left {
+    float: left;
+    width: 645px;
+    padding-right: 58px;
+    border-right: #d7d7d7 solid 1px
+}
+
+.form_name {
+    margin-top: 30px
+}
+
+.form_name .form_row {
+    padding: 25px 0 25px 10px;
+    border-top: #d7d7d7 solid 1px
+}
+
+.title_row {
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif;
+    font-size: 20px;
+    color: #202020
+}
+
+.title_row span {
+    display: inline-block;
+    color: #204daa;
+    font-size: 30px;
+    margin-right: 10px
+}
+
+.check_list {
+    margin-top: 15px
+}
+
+.castom_check.w22 input[type="checkbox"] + label {
+    font-size: 13px;
+    color: #353535
+}
+
+.castom_check.w22 input[type="checkbox"] + label::before {
+    width: 22px;
+    height: 22px;
+    background: url(http://mamovediya.com.ua/assets/check_icon-b0b69bdd3a807a34bbfc4efa302d3fff.png);
+    background-position: 0px -23px
+}
+
+.castom_check.w22 input[type="checkbox"]:checked + label::before {
+    background-position: 0 0
+}
+
+.castom_check.w22 {
+    margin-left: 32px
+}
+
+.castom_check.w22 li {
+    float: left;
+    margin: 10px 0;
+    margin-left: 20px
+}
+
+.castom_check.w22 li:first-child {
+    margin-left: 0
+}
+
+.name_calendar {
+    margin: 15px 0 0 32px
+}
+
+.name_calendar input[type="text"] {
+    border: 1px solid rgba(0, 0, 0, 0.38);
+    background: #fff;
+    width: 115px;
+    padding: 0 5px;
+    height: 37px;
+    font-size: 13px;
+    color: #353535
+}
+
+.nc_col {
+    float: left
+}
+
+.nc_col li {
+    margin: 7px 0
+}
+
+.visible_block {
+    float: left;
+    width: 320px
+}
+
+.hide_block {
+    display: none;
+    float: right;
+    width: 280px;
+    text-align: right
+}
+
+.form_name .form_row input[type="submit"] {
+    background: #eb3d93;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    height: 40px
+}
+
+.np_right {
+    float: right;
+    width: 270px
+}
+
+.form_select {
+    font-size: 13px;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    color: #353535;
+    width: 220px;
+    float: right
+}
+
+.fs_title {
+    font-size: 20px;
+    color: #3b3a3a;
+    margin-bottom: 20px
+}
+
+.row_select {
+    position: relative;
+    margin-top: 20px
+}
+
+.row_select input[type="text"] {
+    float: left;
+    width: 120px;
+    border: #9e9e9e solid 1px;
+    border-right: 0;
+    height: 38px;
+    padding: 0 10px;
+    outline: none
+}
+
+.row_select input[type="submit"] {
+    float: left;
+    width: 70px;
+    height: 40px;
+    background: #eb3d93;
+    border: 0;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif
+}
+
+.value_row {
+    font-size: 20px;
+    color: #5d5d5d;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif;
+    line-height: 32px
+}
+
+.value_row b {
+    color: #202020
+}
+
+.name_row {
+    padding: 25px 0;
+    border-top: #d7d7d7 solid 1px
+}
+
+.name_row:first-child {
+    padding-top: 0;
+    border-top: 0
+}
+
+.name_item ul li {
+    display: inline-block;
+    min-width: 125px;
+    margin-bottom: 10px
+}
+
+.name_item ul li a {
+    font-size: 15px;
+    color: #5d5d5d
+}
+
+.name_item ul li a:hover {
+    text-decoration: underline;
+    color: #204daa
+}
+
+.name_item {
+    margin-top: 30px
+}
+
+.text_colum {
+    column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-gap: 25px;
+    -moz-column-gap: 25px;
+    -webkit-column-gap: 25px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0
+}
+
+.name_content {
+    margin-top: 25px
+}
+
+.name_row:first-child {
+    border-top: 0
+}
+
+.col_name {
+    float: right;
+    width: 800px;
+    margin-left: 15px
+}
+
+.col_name:first-child {
+    float: left;
+    width: 160px;
+    margin-left: 0
+}
+
+.col_name b {
+    font-family: 'robotobold', Tahoma, sans-serif
+}
+
+.title_nc {
+    font-size: 20px;
+    color: #202020;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif
+}
+
+.recomend_name {
+    background: #f9f8f7;
+    padding: 45px 0;
+    width: 980px;
+    margin: 0 auto
+}
+
+.recomend_name .name_row {
+    border-top: 0;
+    width: 800px;
+    float: right
+}
+
+.content {
+    float: left;
+    width: 640px
+}
+
+.sidebar {
+    float: right;
+    width: 300px
+}
+
+.select_month {
+    background: #ea3d93 url(http://mamovediya.com.ua/assets/bg_block-a085d9b4f1cce83ce5d1cef8c8c9e03e.png);
+    padding: 25px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    margin-bottom: 40px
+}
+
+.select_month ul {
+    margin-top: 20px
+}
+
+.select_month ul li {
+    display: inline-block;
+    margin: 0 9px
+}
+
+.select_month ul li a {
+    display: block;
+    width: 23px;
+    height: 23px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    font-family: "Roboto Black", Tahoma, sans-serif
+}
+
+.select_month ul li.active a {
+    background: #fff;
+    border-radius: 50%;
+    color: #ea3d93
+}
+
+.title_page {
+    font-size: 20px;
+    color: #202020;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif;
+    margin-bottom: 15px
+}
+
+.tab_content .tab_pager ul {
+    margin-bottom: 20px
+}
+
+.tab_content .tab_pager ul li {
+    float: left;
+    background: #ea3d93;
+    border: #ea3d93 solid 2px;
+    margin-left: 4px;
+    border-bottom: 0
+}
+
+.tab_content .tab_pager ul li:first-child {
+    margin-left: 0
+}
+
+.tab_content .tab_pager ul li a {
+    display: block;
+    padding: 10px 17px;
+    color: #fff;
+    font-size: 14px
+}
+
+.tab_content .tab_pager ul li.active {
+    background: #fff
+}
+
+.tab_content .tab_pager ul li.active a {
+    font-size: 14px;
+    color: #171715;
+    font-family: 'robotobold', Tahoma, sans-serif
+}
+
+.comment_block {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: #ebebeb solid 1px
+}
+
+.img_aut {
+    float: left;
+    width: 75px;
+    margin-right: 15px
+}
+
+.img_aut span {
+    display: block;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 50%
+}
+
+.img_aut span img {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle
+}
+
+.des_comment {
+    overflow: hidden
+}
+
+.name {
+    display: inline-block;
+    font-size: 20px;
+    color: #171715;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    margin-right: 15px
+}
+
+.date_comment {
+    display: inline-block;
+    font-size: 20px;
+    color: #5d5d5d;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.text_comment {
+    margin-top: 5px
+}
+
+.text_comment a {
+    display: block;
+    font-size: 14px;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    margin-top: 5px
+}
+
+.text_comment p {
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 0
+}
+
+.hide_text {
+    display: none
+}
+
+.rating {
+    float: left
+}
+
+.reply {
+    float: right
+}
+
+.reply a {
+    font-size: 14px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.rating a {
+    display: inline-block;
+    font-family: "Roboto Black", Tahoma, sans-serif;
+    font-size: 20px
+}
+
+.rating span {
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    margin: 0 5px
+}
+
+.plus {
+    color: #eb3d93
+}
+
+.commet_row {
+    margin-top: 15px
+}
+
+.action_block {
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: #ebebeb solid 1px
+}
+
+.field_comment {
+    background: #f9f8f7;
+    padding: 15px
+}
+
+.title_field {
+    font-size: 16px;
+    color: #171715;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif
+}
+
+.p_photo {
+    float: left
+}
+
+.p_photo span {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 50%
+}
+
+.p_name {
+    float: left;
+    overflow: hidden;
+    font-size: 16px;
+    color: #171715;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    margin: 9px 0 0 10px
+}
+
+.commet_row.last_comment .action_block {
+    border-bottom: 0
+}
+
+.name_field {
+    float: left;
+    margin-top: 9px
+}
+
+.field_right {
+    float: right;
+    width: 300px
+}
+
+.my_profile {
+    float: right;
+    margin-right: 50px
+}
+
+.exit_comment {
+    float: right;
+    margin-top: 9px
+}
+
+.exit_comment a {
+    font-size: 14px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.comment_form {
+    margin-top: 15px
+}
+
+.comment_form textarea {
+    background: #fff;
+    border: 0;
+    width: 97%;
+    height: 90px;
+    padding: 10px;
+    resize: none
+}
+
+.comment_form .subm {
+    text-align: right;
+    margin-top: 15px
+}
+
+.comment_form input[type="submit"] {
+    background: transparent;
+    padding: 11px 20px 11px;
+    font-size: 16px;
+    cursor: pointer;
+    border: #204daa solid 2px;
+    border-radius: 25px;
+    color: #171715;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif
+}
+
+.topic_section {
+    background: #ea3d93 url(http://mamovediya.com.ua/assets/bg_block-a085d9b4f1cce83ce5d1cef8c8c9e03e.png);
+    padding: 25px 15px 20px 20px;
+    margin-bottom: 35px
+}
+
+.top_title {
+    color: #fff;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase
+}
+
+.scroll_content {
+    height: 350px;
+    margin-top: 15px
+}
+
+.scroll_content ul li {
+    margin-top: 14px
+}
+
+.scroll_content ul li:first-child {
+    margin-top: 0
+}
+
+.scroll_content ul li a {
+    display: block;
+    font-size: 16px;
+    color: #ffdeee;
+    padding-left: 10px
+}
+
+.scroll_content ul li.active a {
+    border-left: #fff solid 2px;
+    color: #fff;
+    font-family: 'robotobold', Tahoma, sans-serif
+}
+
+.desease_by_alphabet {
+    background: #204daa url(http://mamovediya.com.ua/assets/bg_block-a085d9b4f1cce83ce5d1cef8c8c9e03e.png)
+}
+
+.desease_by_alphabet .top_title {
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif
+}
+
+.desease_by_alphabet .letters {
+    padding: 20px 4px 20px 10px;
+    border-bottom: 1px solid #fff
+}
+
+.desease_by_alphabet .letters ul li {
+    display: inline-block;
+    color: #fff;
+    padding-right: 11px;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 25px
+}
+
+.desease_by_alphabet .letters ul li a {
+    color: #fff;
+    cursor: pointer;
+    width: 23px;
+    text-align: center
+}
+
+.desease_by_alphabet .letters ul li a:hover, .desease_by_alphabet .letters ul li a.active {
+    border-radius: 50%;
+    background: #fff;
+    color: #204daa
+}
+
+.desease_by_alphabet .scroll_content {
+    height: 180px
+}
+
+.desease_by_alphabet .scroll_content ul li a {
+    color: #99b4ea
+}
+
+.desease_by_alphabet .scroll_content ul li a span {
+    font-size: 12px;
+    padding-left: 10px;
+    white-space: nowrap
+}
+
+#common_desease_bottom, #all_desease_bottom {
+    display: none;
+    color: #fff;
+    margin-top: 16px;
+    margin-left: 10px;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+#all_desease_top {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    text-transform: uppercase;
+    margin-top: 13px;
+    margin-left: 4px
+}
+
+.desease_by_alphabet .scroll_content ul li.active a {
+    color: #fff
+}
+
+.tab_sidebar {
+    width: 288px
+}
+
+.tab_sidebar {
+    border: #204daa solid 6px;
+    margin-top: 40px
+}
+
+.tab_sidebar .tab_pager {
+    width: 100%
+}
+
+.tab_sidebar .tab_pager ul li {
+    float: left;
+    width: 50%;
+    background: #204daa
+}
+
+.tab_sidebar .tab_pager ul li.active {
+    background: #fff
+}
+
+.tab_sidebar .tab_pager ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.tab_sidebar .tab_pager ul li.active a {
+    background: #fff;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    color: #204daa
+}
+
+.tab_sidebar .tab_content {
+    background: #fff;
+    position: relative
+}
+
+.tab_sidebar .direction ul li {
+    font-size: 15px;
+    color: #5d5d5d;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.tab_sidebar .tab_des1 {
+    padding: 40px 10px 34px 30px;
+    position: relative
+}
+
+.all_diseases {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: #f9f7f7;
+    -moz-box-shadow: -1px 1px 0 rgba(0, 0, 0, 0.08), inset -1px 1px 0 rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: -1px 1px 0 rgba(0, 0, 0, 0.08), inset -1px 1px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: -1px 1px 0 rgba(0, 0, 0, 0.08), inset -1px 1px 0 rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-top: 40px
+}
+
+.alldis_title {
+    font-size: 14px;
+    color: #8b8b8b;
+    padding-bottom: 15px;
+    border-bottom: #8b8b8b solid 1px;
+    text-transform: uppercase
+}
+
+.alldis_content a {
+    color: #8b8b8b;
+    font-size: 16px;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    margin-top: 10px
+}
+
+.alldis_content a span + span {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.title_form {
+    font-size: 20px;
+    color: #3b3a3a;
+    padding-bottom: 20px
+}
+
+.form_param .form_row {
+    padding: 25px 0;
+    border-top: #d7d7d7 solid 1px
+}
+
+.form_param .form_item {
+    float: left;
+    width: 280px;
+    margin-left: 20px
+}
+
+.form_param .form_item:first-child {
+    margin-left: 0
+}
+
+.form_param .form_item label {
+    display: block;
+    font-size: 15px;
+    color: #5d5d5d;
+    margin-bottom: 15px
+}
+
+.form_param .form_item input[type="text"] {
+    height: 37px;
+    border: #d7d7d7 solid 1px;
+    outline: none;
+    font-size: 13px;
+    color: #353535;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    padding: 0 10px
+}
+
+.form_param .form_item .date_s {
+    width: 97px
+}
+
+.form_param .form_item .numb_rou {
+    width: 30px
+}
+
+.form_param .form_row.subm input {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    background: #eb3d93;
+    padding: 10px 25px;
+    height: auto
+}
+
+.calendar_row {
+    padding-top: 25px
+}
+
+.cal_item {
+    float: left;
+    width: 280px;
+    margin-left: 40px
+}
+
+.cal_item:first-child {
+    margin-left: 0
+}
+
+.cal_item table {
+    width: 100%
+}
+
+.cal_item table thead tr th {
+    vertical-align: middle;
+    height: 50px;
+    background: #204daa;
+    font-size: 15px;
+    line-height: 15px;
+    color: #fff;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    padding: 0;
+    text-align: center;
+    border: 0
+}
+
+.cal_item table thead tr th div {
+    font-size: 15px;
+    color: #fff
+}
+
+.cal_item table tbody tr td {
+    background: #fbfbfb;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 13px;
+    color: #3b3a3a;
+    line-height: normal;
+    padding: 0;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    border: 0
+}
+
+.cal_item table tbody tr.weekday td {
+    background: #e9e9e9;
+    color: #181818;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif;
+    font-size: 15px
+}
+
+.cal_item table tbody tr td.ovl {
+    background: #818181;
+    color: #fff
+}
+
+.cal_item table tbody tr td.ausp {
+    background: #e8e8e8
+}
+
+.cal_item table tbody tr td.begin {
+    background: #fbd8e9
+}
+
+.cal_item table thead {
+    border: #204daa solid 1px
+}
+
+.cal_item table tbody {
+    border: #e9e9e9 solid 1px
+}
+
+.cal_item.left_cal table thead tr th span {
+    margin-left: -20px
+}
+
+.cal_item.right_cal table thead tr th span {
+    margin-right: -20px
+}
+
+.call_arrow {
+    width: 7px;
+    height: 13px
+}
+
+.call_arrow.left {
+    float: left;
+    background: url(http://mamovediya.com.ua/assets/arrow_cal-954cf10e928784a77dc9771c41a28cca.png) no-repeat;
+    margin-left: 20px
+}
+
+.call_arrow.right {
+    float: right;
+    background: url(http://mamovediya.com.ua/assets/arrow_cal_right-2f568e0077dd1e0c856a3beb89db5ec3.png) no-repeat;
+    margin-right: 20px
+}
+
+.des_call {
+    margin: 10px 0 50px
+}
+
+.des_call ul li {
+    float: left;
+    width: 280px;
+    font-size: 15px;
+    color: #5d5d5d;
+    margin-top: 30px;
+    padding-left: 40px;
+    position: relative
+}
+
+.des_call ul li:before {
+    content: '';
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -15px;
+    border: transparent solid 1px
+}
+
+.des_call ul li.ovl:before {
+    background: #e8e8e8
+}
+
+.des_call ul li.begin:before {
+    background: #fbd8e9
+}
+
+.des_call ul li.ausp:before {
+    background: #818181
+}
+
+.des_call ul li.secur:before {
+    background: #fefefe;
+    border-color: #cccccc
+}
+
+.main .custom-select .custom-text, .main .custom-select.disabled span.custom-text:hover {
+    border-color: #9e9e9e;
+    width: 40px;
+    height: 40px;
+    color: #353535;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    font-size: 13px
+}
+
+.main .active span.custom-text::after {
+    background: url(http://mamovediya.com.ua/assets/main_arrow-eb22793b399c2b8b4818b3bd98fdb244.png) 0 -41px
+}
+
+.main .custom-select .custom-text::after {
+    background: url(http://mamovediya.com.ua/assets/main_arrow-eb22793b399c2b8b4818b3bd98fdb244.png);
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px
+}
+
+.select_box {
+    margin-bottom: 25px
+}
+
+.hide_button {
+    margin-bottom: 30px
+}
+
+.hide_button a {
+    background: #204daa;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 13px 25px 14px
+}
+
+.hide_comment {
+    display: none
+}
+
+.left_col {
+    width: 580px;
+    padding-right: 57px
+}
+
+.form_param.born .form_row.subm {
+    border-top: 0;
+    padding-top: 0
+}
+
+.breadcrumbs {
+    margin-bottom: 25px
+}
+
+.date_info .form_item {
+    color: #5d5d5d;
+    font-size: 15px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.date {
+    color: #3b3a3a;
+    font-size: 20px;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    line-height: 26px;
+    margin: 10px 0
+}
+
+.explanation_page {
+    margin-top: 25px
+}
+
+.explanation_page p {
+    font-size: 13px;
+    line-height: 19px
+}
+
+.ui-datepicker th {
+    font-size: 12px;
+    line-height: normal;
+    font-family: 'robotobold', Tahoma, sans-serif
+}
+
+.des_form table tr td {
+    min-width: 250px
+}
+
+.des_form table tr td + td {
+    min-width: 130px
+}
+
+.des_form table tr td + td + td {
+    min-width: 450px
+}
+
+.title_des {
+    font-size: 20px;
+    color: #eb3d93;
+    margin-bottom: 25px
+}
+
+.action_page {
+    margin: 25px 0 40px;
+    text-align: center
+}
+
+.action_page a {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    color: #000000;
+    padding-left: 35px;
+    text-decoration: underline;
+    margin-left: 30px
+}
+
+.action_page a:first-child {
+    margin-left: 0
+}
+
+.action_page a:hover {
+    text-decoration: none
+}
+
+.action_page a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%
+}
+
+.action_page a.save_page:before {
+    background: url(http://mamovediya.com.ua/assets/save_icon-260ce6fe36362d9c88cb36bd8ea82502.png) no-repeat;
+    width: 24px;
+    height: 18px;
+    margin-top: -9px
+}
+
+.action_page a.print:before {
+    background: url(http://mamovediya.com.ua/assets/print_icon-3857e23d9621f76bd4f66c2d3feeadbd.png) no-repeat;
+    width: 19px;
+    height: 19px;
+    margin-top: -9px
+}
+
+.form_search {
+    position: relative
+}
+
+.form_search input[type="text"] {
+    width: 508px;
+    height: 40px;
+    border: #989999 solid 1px;
+    border-right: 0;
+    border-radius: 2px 0 0 2px;
+    outline: none;
+    float: left;
+    font-size: 14px;
+    color: #353535;
+    padding: 0 20px
+}
+
+.form_search input[type="submit"] {
+    background: #eb3d93;
+    border: transparent solid 1px;
+    height: 42px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    margin: 0
+}
+
+.result {
+    margin-top: 30px
+}
+
+.result .result_stats {
+    font-size: 20px;
+    color: #000000
+}
+
+.ask_box {
+    background: #ea3d93 url(http://mamovediya.com.ua/assets/bg_block-a085d9b4f1cce83ce5d1cef8c8c9e03e.png);
+    padding: 35px 30px 35px 30px;
+    margin-bottom: 35px
+}
+
+.ask_box {
+    font-size: 20px;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    color: #fff;
+    line-height: 28px
+}
+
+.ask_button {
+    margin-top: 20px
+}
+
+.ask_button a {
+    display: inline-block;
+    background: #fff;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: #204daa;
+    border-radius: 25px;
+    text-transform: uppercase
+}
+
+.doctors_box {
+    border: #204daa solid 4px;
+    padding: 25px
+}
+
+.tc_box {
+    font-size: 20px;
+    color: #000000;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 25px
+}
+
+.doctors_row {
+    padding: 25px 0;
+    border-top: #d7d7d7 solid 1px
+}
+
+.doc_foto {
+    float: left;
+    width: 70px
+}
+
+.doc_foto span {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    border: #224eab solid 1px;
+    overflow: hidden
+}
+
+.doc_foto span img {
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle
+}
+
+.doc_des {
+    float: left;
+    width: 150px;
+    margin-left: 10px;
+    line-height: 19px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.name_doc {
+    font-size: 15px;
+    color: #020202
+}
+
+.specification {
+    font-size: 13px;
+    color: #5d5d5d;
+    margin-top: 10px
+}
+
+.time_job {
+    color: #5d5d5d;
+    margin-top: 10px;
+    line-height: 19px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.time_job b {
+    font-family: 'robotobold', Tahoma, sans-serif
+}
+
+.respons_col {
+    font-size: 20px;
+    color: #202020;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif
+}
+
+.result_des {
+    margin-top: 20px
+}
+
+.result_des > ul > li {
+    padding: 20px 15px 20px 15px;
+    border-bottom: #d7d7d7 solid 1px
+}
+
+.who_doc {
+    font-size: 13px;
+    color: #5d5d5d;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    margin-top: 10px
+}
+
+.respons_col {
+    float: left;
+    width: 150px;
+    padding-top: 3px
+}
+
+.respons_des {
+    float: left;
+    width: 420px;
+    margin-left: 30px
+}
+
+.reply_row {
+    background: #f3f7ff;
+    position: relative;
+    padding: 25px;
+    display: none
+}
+
+.reply_row:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 15px 15px 15px;
+    border-color: transparent transparent #f3f7ff transparent
+}
+
+.useful {
+    vertical-align: middle;
+    font-size: 15px;
+    color: #5d5d5d
+}
+
+.useful a {
+    display: inline-block;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 14px;
+    background: #eb3d93;
+    margin-left: 15px
+}
+
+.useful a.n_useful {
+    opacity: 0.6
+}
+
+.useful a.n_useful:hover {
+    opacity: 1
+}
+
+.open_reply {
+    font-size: 15px;
+    color: #eb3d93;
+    text-decoration: underline;
+    position: relative;
+    padding-right: 25px
+}
+
+.open_reply:before {
+    content: '';
+    background: url(http://mamovediya.com.ua/assets/arrow_reply-7a3d63e226863387f109a3a922a31c19.png) no-repeat;
+    width: 15px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -5px
+}
+
+.open_reply.active {
+    display: none
+}
+
+.close_reply {
+    float: right;
+    font-size: 15px;
+    color: #eb3d93;
+    text-decoration: underline;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif
+}
+
+.respons_des span, .result span {
+    display: inline-block;
+    background: #ffe7f3
+}
+
+.paginator {
+    margin-top: 50px
+}
+
+.paginator ul li {
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle
+}
+
+.paginator ul li a {
+    display: inline-block;
+    font-size: 20px;
+    color: #949494;
+    font-family: 'roboto_condensedlight'
+}
+
+.paginator ul li.active {
+    color: #eb3d93;
+    cursor: text;
+    font-size: 20px;
+    font-family: 'roboto_condensedlight'
+}
+
+.paginator ul li.no_page {
+    opacity: 0.6;
+    cursor: default;
+    font-size: 20px;
+    color: #949494;
+    font-family: 'roboto_condensedlight'
+}
+
+.open_es {
+    position: absolute;
+    top: 13px;
+    right: 100px;
+    font-size: 13px;
+    color: #353535;
+    text-decoration: underline
+}
+
+.extended_search {
+    display: none;
+    padding-bottom: 20px;
+    border-bottom: #d1d0d0 solid 1px;
+    margin-bottom: 20px
+}
+
+.extended_search .custom-select .custom-text, .extended_search .custom-select.disabled span.custom-text:hover {
+    border-color: #9e9e9e;
+    width: 40px;
+    height: 40px;
+    color: #353535;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    font-size: 13px
+}
+
+.extended_search .active span.custom-text::after {
+    background: url(http://mamovediya.com.ua/assets/main_arrow-eb22793b399c2b8b4818b3bd98fdb244.png) 0 -41px
+}
+
+.extended_search .custom-select .custom-text::after {
+    background: url(http://mamovediya.com.ua/assets/main_arrow-eb22793b399c2b8b4818b3bd98fdb244.png);
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px
+}
+
+.form_col {
+    float: left;
+    margin-left: 30px
+}
+
+.form_col:first-child {
+    margin-left: 0
+}
+
+.form_col label {
+    float: left;
+    font-size: 15px;
+    color: #5d5d5d;
+    margin: 10px 10px 0 0
+}
+
+.castom_select.w200 .custom-text, .castom_select.w200 .select-list {
+    min-width: 190px
+}
+
+.castom_select.w220 .custom-text, .castom_select.w220 .select-list {
+    min-width: 225px
+}
+
+.castom_select.w150 .custom-text, .castom_select.w150 .select-list {
+    min-width: 140px
+}
+
+.form_col .custom-select {
+    float: left
+}
+
+.extended_search input[type="submit"] {
+    float: right;
+    background: #eb3d93;
+    border: transparent solid 1px;
+    height: 42px;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    margin: 0
+}
+
+.des_form.point_list table tr td {
+    min-width: 90px;
+    height: 90px
+}
+
+.des_form.point_list table tr td + td {
+    min-width: 265px
+}
+
+.des_form.point_list table tr td + td + td {
+    min-width: 157px
+}
+
+.des_form.point_list table tr td:first-child {
+    line-height: normal;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle
+}
+
+.uc_serch_filter {
+    margin-bottom: 28px
+}
+
+.uc_serch_filter input[type="text"] {
+    float: left;
+    width: 178px;
+    border: #9e9e9e solid 1px;
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
+    margin-right: 27px
+}
+
+.uc_serch_filter .castom_select {
+    float: left;
+    min-width: 200px;
+    margin-right: 30px
+}
+
+.uc_serch_filter .castom_select:last-child {
+    margin-right: 0px
+}
+
+.uc_serch_filter .custom-text, .uc_serch_filter .custom-select ul {
+    min-width: 200px !important
+}
+
+.uc_serch_filter input[type="submit"] {
+    width: 75px;
+    height: 42px;
+    border: 0;
+    background: #EB3D93;
+    color: #FFF;
+    font-size: 14px;
+    float: left;
+    margin-left: 18px
+}
+
+.location-tab-caption {
+    margin-bottom: 30px
+}
+
+.location-tab-caption span {
+    font-size: 13px;
+    color: #353535;
+    float: left;
+    width: 73px;
+    margin-top: 10px
+}
+
+.location-tab-caption ul li {
+    float: left;
+    margin-right: 4px;
+    width: 106px;
+    border: 2px #eb3d93 solid;
+    border-bottom: 0
+}
+
+.location-tab-caption a {
+    display: inline-block;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    background: #EB3D93;
+    color: #FFF;
+    font-weight: normal;
+    font-size: 14px
+}
+
+.location-tab-caption .active a {
+    color: #000;
+    font-weight: bold;
+    background: #FFF
+}
+
+.location-tab-container {
+    display: none
+}
+
+.map-container {
+    height: 560px;
+    border-top: 4px #204daa solid;
+    position: relative;
+    left: 50%
+}
+
+#map {
+    height: 560px;
+    width: 100%;
+    position: relative
+}
+
+.popover {
+    display: block;
+    background: rgba(32, 77, 170, 0.9);
+    position: absolute;
+    z-index: 1010;
+    padding: 1px;
+    text-align: left;
+    padding: 20px
+}
+
+.popover:after {
+    content: "";
+    position: absolute;
+    opacity: .9;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 17px 18px 0 18px;
+    border-color: #1f4da9 transparent transparent transparent;
+    left: 20px;
+    bottom: -17px
+}
+
+.popover-content {
+    font-size: 15px;
+    color: #FFF
+}
+
+.popover .close {
+    position: absolute;
+    right: 15px;
+    top: 24px;
+    width: 13px;
+    height: 10px;
+    background: url(http://mamovediya.com.ua/assets/close-popover-907ce2fc322b2fe85c52a37b4e85b568.png)
+}
+
+.popover-title {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    color: #FFF
+}
+
+.m-contact {
+    overflow: hidden;
+    margin-bottom: 10px;
+    line-height: normal
+}
+
+.m-contact span {
+    width: 60px;
+    text-align: right;
+    margin-right: 14px;
+    float: left
+}
+
+.m-contact div {
+    overflow: hidden
+}
+
+.popover-content .print {
+    position: absolute;
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 18px;
+    right: 45px;
+    bottom: 25px
+}
+
+.popover-content .print:after {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: -1px;
+    background: url(http://mamovediya.com.ua/assets/print-marker-b0f35161fce59aa1fdc5dee012f2e8b2.png);
+    width: 20px;
+    height: 26px
+}
+
+.popup {
+    display: none
+}
+
+.popup_bg {
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3
+}
+
+.popup_map .popup_wrapp {
+    position: fixed;
+    width: 610px;
+    height: 465px;
+    left: 50%;
+    top: 50%;
+    margin: -237px 0 0 -310px;
+    background: #204daa;
+    border: #204daa solid 5px;
+    z-index: 4
+}
+
+@media print {
+    .popup_map .popup_wrapp {
+        position: absolute
+    }
+}
+
+.content_popup {
+    height: 162px
+}
+
+.map_popup {
+    height: 232px
+}
+
+.content_popup {
+    padding: 35px;
+    position: relative
+}
+
+.content_popup b {
+    color: #fff
+}
+
+.add_institut {
+    float: left;
+    margin-left: 35px
+}
+
+.add_institut a {
+    display: inline-block;
+    border: #dadada solid 1px;
+    border-radius: 25px;
+    padding: 10px 25px 12px
+}
+
+.add_institut a span {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #ea3c92;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    position: relative;
+    padding-left: 15px
+}
+
+.add_institut a span:before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    color: #ea3c92;
+    font-family: 'robotobold', Tahoma, sans-serif
+}
+
+.close_p {
+    position: absolute;
+    top: 24px;
+    right: 16px
+}
+
+.close_map a {
+    display: block;
+    background: url(http://mamovediya.com.ua/assets/close_map_p-907ce2fc322b2fe85c52a37b4e85b568.png) no-repeat;
+    width: 13px;
+    height: 10px
+}
+
+.institution .popup_wrapp {
+    position: fixed;
+    width: 600px;
+    height: 560px;
+    left: 50%;
+    top: 50%;
+    margin: -280px 0 0 -300px;
+    background: #fff;
+    z-index: 4
+}
+
+.institution .popup_bg {
+    background: rgba(153, 153, 153, 0.8)
+}
+
+.title_popup {
+    padding: 20px 40px 0;
+    border-bottom: #efefef solid 1px
+}
+
+.info_p {
+    padding: 20px 40px;
+    border-bottom: #efefef solid 1px
+}
+
+.info_p p {
+    margin-bottom: 10px
+}
+
+.info_p i {
+    color: #5d5d5d;
+    font-size: 12px
+}
+
+.popup_form {
+    padding: 0px 40px
+}
+
+.popup_form .form_row {
+    margin-top: 15px
+}
+
+.popup_form .form_row label {
+    display: block;
+    font-size: 12px;
+    color: #5d5d5d;
+    margin-bottom: 10px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.popup_form .form_item {
+    float: left;
+    width: 150px;
+    margin-left: 20px
+}
+
+.popup_form .form_item:first-child {
+    margin-left: 0;
+    width: 180px
+}
+
+.popup_form .form_row input[type="text"] {
+    border: 1px solid rgba(0, 0, 0, 0.38);
+    width: 498px;
+    height: 40px;
+    outline: none;
+    font-size: 14px;
+    color: #353535;
+    padding: 0 10px
+}
+
+.popup_form .form_item input[type="text"] {
+    width: 128px
+}
+
+.popup_form .form_item:first-child input[type="text"] {
+    width: 160px
+}
+
+.popup_form .custom-select {
+    height: 42px
+}
+
+.popup_form .custom-select .custom-text, .main .custom-select.disabled span.custom-text:hover {
+    border-color: #9e9e9e;
+    width: 40px;
+    height: 40px;
+    color: #353535;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    font-size: 13px
+}
+
+.popup_form .active span.custom-text::after {
+    background: url(http://mamovediya.com.ua/assets/main_arrow-eb22793b399c2b8b4818b3bd98fdb244.png) 0 -41px
+}
+
+.popup_form .custom-select .custom-text::after {
+    background: url(http://mamovediya.com.ua/assets/main_arrow-eb22793b399c2b8b4818b3bd98fdb244.png);
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px
+}
+
+.popup_form .custom-text, .popup_form .select-list {
+    min-width: 170px
+}
+
+.form_row.subm {
+    text-align: right
+}
+
+.form_row.subm input[type="submit"] {
+    background: #eb3d93;
+    border: transparent solid 1px;
+    height: 39px;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    margin: 0
+}
+
+#ppmap {
+    width: 100%;
+    height: 232px
+}
+
+.result_stats span {
+    display: block;
+    color: #5d5d5d;
+    font-size: 15px;
+    margin-top: 15px
+}
+
+.right_img {
+    text-align: right
+}
+
+.result_title {
+    font-size: 40px
+}
+
+.result_content {
+    margin-top: 10px
+}
+
+.result_content > ul > li {
+    padding: 25px 0 20px;
+    border-bottom: #ebebeb solid 1px
+}
+
+.name_ar {
+    margin-bottom: 17px
+}
+
+.name_ar a {
+    color: #204daa;
+    font-size: 20px
+}
+
+.section_art {
+    font-size: 15px;
+    color: #5d5d5d
+}
+
+.result_content ul li p {
+    margin-bottom: 0;
+    margin-top: 17px
+}
+
+.start_des h4 {
+    font-weight: 700
+}
+
+.start_manual {
+    margin-top: 15px
+}
+
+.start_manual p {
+    font-size: 14px
+}
+
+.start_manual span {
+    color: #eb3d93;
+    text-decoration: underline;
+    font-size: 14px
+}
+
+.available {
+    font-size: 15px;
+    color: #5d5d5d;
+    margin-top: 40px
+}
+
+.available table {
+    width: auto
+}
+
+.available table tr td {
+    border: 0;
+    vertical-align: middle
+}
+
+.available table tbody tr:first-child td {
+    border-top: 0
+}
+
+.share_box {
+    background: #f3f2ef;
+    padding: 17px 20px 19px;
+    border-radius: 5px
+}
+
+.sh_left {
+    float: left;
+    width: 230px;
+    color: #898787;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.sh_right {
+    float: right;
+    width: 230px;
+    text-align: right;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.sh_right a {
+    display: inline-block;
+    color: #898787;
+    font-size: 11px;
+    position: relative;
+    padding-left: 15px
+}
+
+.sh_right a:before {
+    content: '';
+    background: url(http://mamovediya.com.ua/assets/complain_icon-d49d81a02f29e77e15fdd6f18cf34df8.png);
+    width: 12px;
+    height: 13px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -7px
+}
+
+.share_col {
+    margin-top: 15px
+}
+
+.share_col ul li {
+    float: left;
+    margin-left: 5px
+}
+
+.share_col ul li:first-child {
+    margin-left: 0
+}
+
+.share_col ul li a {
+    display: block
+}
+
+.share_col ul li.comment_art {
+    float: right
+}
+
+.share_col ul li.comment_art a {
+    border: #c1c0be solid 1px;
+    padding: 9px 15px 10px;
+    border-radius: 3px
+}
+
+.share_col ul li.comment_art a span {
+    color: #171715;
+    font-size: 10px;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    text-transform: uppercase
+}
+
+.additional_menu {
+    float: right;
+    width: 762px;
+    margin: 10px 0 0 0
+}
+
+.additional_menu ul li {
+    border-left: 0;
+    padding: 0 12px
+}
+
+.additional_menu ul li:first-child {
+    padding-left: 0
+}
+
+.additional_menu ul li a {
+    font-size: 16px;
+    color: #353535;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif
+}
+
+.additional_menu ul li.active a {
+    color: #204daa
+}
+
+.vks table tbody tr td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+.ts {
+    margin-left: 17px !important
+}
+
+.hide_chapter_name .subtitle {
+    display: none
+}
+
+.hide_chapter_name .name_art {
+    margin-top: 0
+}
+
+.name_sect {
+    cursor: pointer
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #fff;
+    width: 205px;
+    border-color: #eb3d93;
+    border-width: 2px;
+    border-style: solid;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    margin-top: -2px
+}
+
+.ui-autocomplete li {
+    font-size: 12px;
+    padding: 5px 10px;
+    cursor: pointer
+}
+
+.ui-autocomplete li.ui-state-focus {
+    background: #eeeeee
+}
+
+.born_date_holder .date_info, .born_date_holder .des_form {
+    display: none
+}
+
+.born_date_holder .error, #ov_calc_form .error {
+    border: 1px solid red !important
+}
+
+.calendar_row .des_call {
+    display: none
+}
+
+.doctor_question .popup_wrapp {
+    position: fixed;
+    width: 500px;
+    height: 560px;
+    left: 50%;
+    top: 50%;
+    margin: -280px 0 0 -250px;
+    background: #fff;
+    z-index: 4
+}
+
+.doctor_question .popup_form .form_item:first-child input[type="text"], .doctor_question .popup_wrapp textarea {
+    width: 395px;
+    padding: 0 10px
+}
+
+.doctor_question .popup_wrapp textarea {
+    height: 80px
+}
+
+.doctor_question .form_row.subm input[type="submit"] {
+    width: 100%
+}
+
+.doctor_question .popup_form .form_item:first-child input[type="text"].error, .doctor_question .popup_wrapp textarea.error {
+    border: 1px solid red
+}
+
+.mark_meter {
+    height: 12px;
+    width: 260px;
+    background: #f0b2d7;
+    border-radius: 50px;
+    position: relative;
+    margin-top: 33px
+}
+
+.mark_meter .mark_meter_plus {
+    height: 12px;
+    border: 0px;
+    background: #eb3d93;
+    border-radius: 50px 0 0 50px
+}
+
+.mark_meter .plus, .mark_meter .minus {
+    position: absolute;
+    top: -22px;
+    font-size: 18px;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif
+}
+
+.mark_meter .plus {
+    left: 15px;
+    color: #eb3d93
+}
+
+.mark_meter .minus {
+    right: 15px;
+    color: #f0b2d7
+}
+
+.mark_meter .plus_bottom, .mark_meter .minus_bottom {
+    position: absolute;
+    bottom: -18px;
+    font-size: 14px;
+    color: #5d5d5d;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif
+}
+
+.mark_meter .plus_bottom {
+    left: 15px
+}
+
+.mark_meter .minus_bottom {
+    right: 15px
+}
+
+.subscribe_form .form_row input[type="text"].error {
+    border: 1px solid red
+}
+
+.add_plain_text blockquote, .add_plain_text blockquote p {
+    font-size: 20px;
+    color: #3b3a3a;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    line-height: 1.4
+}
+
+.add_plain_text ul {
+    list-style: inherit;
+    padding-left: 21px
+}
+
+.add_plain_text ul li {
+    padding: 3px;
+    color: #5d5d5d;
+    font-size: 15px;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.alldis_content ul li a {
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    font-size: 16px
+}
+
+.alldis_content ul li a span {
+    padding-left: 18px;
+    font-size: 12px;
+    font-style: italic
+}
+
+.scroll_content {
+    height: 260px
+}
+
+.desease_by_alphabet .scroll_content {
+    height: 180px
+}
+
+.auth_popup .popup_wrapp {
+    position: fixed;
+    width: 520px;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    margin: -280px 0 0 -250px;
+    background: #fff;
+    z-index: 4
+}
+
+.login_body {
+    padding: 30px
+}
+
+.login_table {
+    width: 100%;
+    display: table
+}
+
+.login_tr {
+    display: table-row
+}
+
+.login_td {
+    display: table-cell;
+    text-align: left;
+    vertical-align: top
+}
+
+.login_td:first-child {
+    padding-top: 30px
+}
+
+.login_td:last-child {
+    border-left: 1px solid black
+}
+
+.login_td .log {
+    display: block;
+    color: #fff;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    width: 160px;
+    margin-right: 20px;
+    cursor: pointer
+}
+
+.login_td .log:first-child {
+    margin-bottom: 20px
+}
+
+.login_td .log.net_vk {
+    background-color: #267fb7
+}
+
+.login_td .log.net_vk:hover {
+    background: #eb3d93
+}
+
+.login_td .log.net_fb {
+    margin-bottom: 20px;
+    background-color: #093993
+}
+
+.login_td .log.net_fb:hover {
+    background: #eb3d93
+}
+
+.login_td .log.net_ok {
+    background-color: #cf6700
+}
+
+.login_td .log.net_ok:hover {
+    background: #eb3d93
+}
+
+.auth_form, .reg_form, .restore_password, .restore_password_text {
+    width: 270px;
+    display: block;
+    margin-left: 20px
+}
+
+.auth_form .form_header, .auth_form span, .reg_form .form_header, .reg_form span, .restore_password .form_header, .restore_password span, .restore_password_text .form_header, .restore_password_text span {
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+#error_restore {
+    padding-top: 5px
+}
+
+.auth_form {
+    display: block
+}
+
+.reg_form, .restore_password, .restore_password_text {
+    display: none
+}
+
+.field_input {
+    margin-bottom: 20px
+}
+
+.field_input input {
+    display: block;
+    width: 231px;
+    padding: 0 10px;
+    border: 2px solid #b9b9b9;
+    height: 31px;
+    line-height: 31px;
+    font-size: 12px;
+    color: #000
+}
+
+.field_input input.error {
+    border-color: red
+}
+
+.form_service .forgotten_password {
+    float: right;
+    padding-top: 5px;
+    margin-top: 8px
+}
+
+.form_service .forgotten_password a {
+    font-size: 14px;
+    text-decoration: underline;
+    color: black;
+    cursor: pointer
+}
+
+.form_service .forgotten_password a:hover {
+    color: red
+}
+
+.goto_new_registration p, .back_to_login p, .restore_text p {
+    margin-bottom: 0px;
+    font-size: 14px;
+    margin-top: 20px
+}
+
+.goto_new_registration a, .back_to_login a, .restore_text a {
+    font-size: 14px;
+    text-decoration: underline;
+    color: black;
+    cursor: pointer
+}
+
+.auth_button input[type="submit"], .reg_button input[type="submit"] {
+    background: #eb3d93;
+    border: transparent solid 1px;
+    height: 39px;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    margin: 0;
+    width: 150px
+}
+
+.reg_button input[type="submit"] {
+    width: 100%
+}
+
+.disclaimer p {
+    font-size: 10px;
+    margin-bottom: 5px;
+    line-height: 1.3
+}
+
+.restore_text p {
+    font-size: 13px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    margin-top: 9px
+}
+
+#error_login, #error_reg {
+    padding-bottom: 10px
+}
+
+#comment_box_main .lets_auth {
+    margin-top: 20px;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    font-size: 16px;
+    color: #5d5d5d
+}
+
+#comment_box_main .lets_auth a {
+    margin-right: 20px;
+    background: transparent;
+    padding: 11px 20px 11px;
+    font-size: 16px;
+    cursor: pointer;
+    border: #204daa solid 2px;
+    border-radius: 25px;
+    color: #171715;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif
+}
+
+.direction ul li a {
+    line-height: 1
+}
+
+.select-list ul li {
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    font-size: 13px
+}
+
+.age .custom-text {
+    min-width: 240px
+}
+
+.aptechka_drugs .drug {
+    margin-bottom: 35px;
+    clear: both
+}
+
+.aptechka_drugs .drug_image {
+    float: left;
+    width: 180px;
+    margin-right: 20px
+}
+
+.aptechka_drugs .drug_image div {
+    width: 180px;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.aptechka_drugs .drug_image div img {
+    vertical-align: middle
+}
+
+.aptechka_drugs .drug_image .more_link {
+    background: url(http://mamovediya.com.ua/assets/i_drugs-a4052f6fe214c87c209c852f6b2c864d.jpg) no-repeat left center;
+    margin-bottom: 10px
+}
+
+.aptechka_drugs .drug_image .download_link {
+    background: url(http://mamovediya.com.ua/assets/down_drug-124e9b0c45e9b39729974f3d596c260a.jpg) no-repeat left center
+}
+
+.aptechka_drugs .drug_image .more_link, .aptechka_drugs .drug_image .download_link {
+    padding-left: 32px;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    color: #0e0e0e;
+    text-decoration: underline;
+    font-size: 13px
+}
+
+.aptechka_drugs .drug_image .more_link:hover, .aptechka_drugs .drug_image .download_link:hover {
+    text-decoration: none
+}
+
+.aptechka_drugs .drug_description {
+    float: left;
+    width: 440px
+}
+
+.aptechka_drugs .drug_description b {
+    color: #202020;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'roboto_condensedbold', Tahoma, sans-serif
+}
+
+.aptechka_drugs .drug_description p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #5d5d5d;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.aptechka_slider {
+    border: 4px solid #204daa;
+    height: 258px;
+    width: 640px;
+    margin-bottom: 40px;
+    position: relative
+}
+
+.aptechka_slider .bx-viewport {
+    height: 270px !important
+}
+
+.aptechka_slider #next_drug, .aptechka_slider #prev_drug {
+    position: absolute;
+    top: 128px;
+    height: 15px;
+    width: 10px;
+    cursor: pointer
+}
+
+.aptechka_slider #next_drug a, .aptechka_slider #prev_drug a {
+    height: 15px;
+    width: 10px
+}
+
+.aptechka_slider #next_drug {
+    right: 15px;
+    background: url(http://mamovediya.com.ua/assets/next_drug-a89ab84168dd84a2c56409997c312bfb.png)
+}
+
+.aptechka_slider #prev_drug {
+    left: 15px;
+    background: url(http://mamovediya.com.ua/assets/prev_drug-97eb0c6403805c96f590aaaf089c726a.png)
+}
+
+.aptechka_slider ul li {
+    list-style: none;
+    text-align: center;
+    margin-top: 30px
+}
+
+.aptechka_slider ul li div {
+    height: 178px;
+    line-height: 178px
+}
+
+.aptechka_slider ul li div img {
+    margin-bottom: 10px;
+    vertical-align: middle;
+    display: inline-block
+}
+
+.aptechka_slider ul li a, .aptechka_slider ul li p {
+    font-size: 14px;
+    color: #5d5d5d;
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif
+}
+
+#goto_week {
+    width: 200px
+}
+
+.extended_search_select .select-list ul, #add_doctor_question .select-list ul {
+    width: auto !important;
+    height: auto !important
+}
+
+.hide_button {
+    margin-top: -10px
+}
+
+.hide_button a {
+    background: none;
+    cursor: pointer
+}
+
+.hide_button a span {
+    font-size: 12px !important
+}
+
+.comment_block {
+    margin-top: 0px
+}
+
+.actual_material {
+    border: 6px solid #e2338a;
+    margin-top: 40px;
+    padding: 30px
+}
+
+.actual_material .actual_material_img {
+    float: left;
+    margin-right: 28px
+}
+
+.actual_material .actual_material_img img {
+    border-radius: 7px
+}
+
+.actual_material .actual_material_content {
+    float: left;
+    width: 170px;
+    padding-right: 20px;
+    padding-top: 18px
+}
+
+.actual_material .actual_material_content .actual_cat {
+    margin-bottom: 18px
+}
+
+.actual_material .actual_material_content .actual_cat a {
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    color: #949494;
+    font-size: 12px;
+    text-transform: uppercase
+}
+
+.actual_material .actual_material_content p a {
+    color: #171715;
+    font-size: 22px;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    text-decoration: none
+}
+
+.actual_material .actual_material_content p a:hover {
+    text-decoration: underline
+}
+
+.actual_material .actual_material_content .info_block {
+    margin-bottom: 0px
+}
+
+.actual_material .actual_material_cont {
+    float: left;
+    width: 180px;
+    font-size: 14px;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    color: #5d5d5d;
+    padding-top: 18px
+}
+
+.hide_chapter_name .actual_cat {
+    display: none
+}
+
+.module_drug.title_slide {
+    float: none;
+    margin-top: 0px;
+    width: auto
+}
+
+.right_new_on_site {
+    margin-top: 20px
+}
+
+.right_new_on_site h1 {
+    font-size: 36px;
+    color: #204daa;
+    font-weight: normal;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    margin-bottom: 15px
+}
+
+.right_new_on_site .new_wrapper {
+    border-left: 3px solid #f3f2ef
+}
+
+.right_new_on_site .new_wrapper > div {
+    padding-top: 20px;
+    margin-left: 21px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f3f2ef;
+    clear: left
+}
+
+.right_new_on_site .new_wrapper > div:last-child {
+    border-bottom: none
+}
+
+.right_new_on_site .right_new_image {
+    float: left
+}
+
+.right_new_on_site .right_new_image img {
+    border-radius: 7px;
+    margin-right: 12px
+}
+
+.right_new_on_site .right_new_description {
+    width: 200px;
+    float: left
+}
+
+.right_new_on_site .right_new_description .actual_cat {
+    margin-bottom: 12px
+}
+
+.right_new_on_site .right_new_description .actual_cat a {
+    font-family: 'roboto_condensedregular', Tahoma, sans-serif;
+    color: #949494;
+    font-size: 12px;
+    text-transform: uppercase
+}
+
+.right_new_on_site .right_new_description p {
+    margin-bottom: 3px
+}
+
+.right_new_on_site .right_new_description p a {
+    color: #171715;
+    font-size: 16px;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    text-decoration: none
+}
+
+.right_new_on_site .right_new_description p a:hover {
+    text-decoration: underline
+}
+
+.right_new_on_site .right_new_description .info_block {
+    margin-bottom: 0px
+}
+
+.promo_block {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 6px solid #204daa
+}
+
+.promo_block .promo_image {
+    float: left;
+    width: 470px;
+    position: relative
+}
+
+.promo_block .promo_image > div {
+    position: absolute;
+    bottom: 26px;
+    left: 30px;
+    color: #d6d0d0
+}
+
+.promo_block .promo_image > div .promo_address {
+    font-family: 'roboto_condensedlight', Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 14px
+}
+
+.promo_block .promo_image > div .promo_name {
+    color: #fff;
+    font-size: 40px;
+    font-family: 'robotoregular', Tahoma, sans-serif;
+    margin-bottom: 12px;
+    width: 390px
+}
+
+.promo_block .promo_content {
+    overflow: hidden;
+    padding: 15px 40px 0px 25px;
+    font-size: 15px;
+    color: #5d5d5d;
+    font-family: 'robotoregular', Tahoma, sans-serif
+}
+
+.promo_block .promo_content > div {
+    margin: 20px 0
+}
+
+.promo_block .promo_content > div a {
+    font-size: 14px;
+    color: #eb3d93;
+    font-family: 'robotobold', Tahoma, sans-serif;
+    text-decoration: underline
+}
+
+.promo_block .promo_content > div a:hover {
+    text-decoration: none
+}
+
+.promo_block:last-child {
+    border-bottom: none
+}
+
+.popup_block h2 {
+    padding-right: 0px
+}
+
+body {
+    background: url(http://mamovediya.com.ua/assets/background-0ed6ac1c948be5fb10c74a40f2e9dd90.png) 50% 0 scroll #e7e2fb
+}
+
+body:before {
+    content: '';
+    width: 1024px;
+    min-height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -512px;
+    z-index: 1
+}
+
+header, .main, footer {
+    position: relative;
+    z-index: 2
+}
+
+footer {
+    position: absolute
+}
+
+header {
+    z-index: 3
+}
+
+header.fixxxed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #fff;
+    padding-bottom: 20px;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
+    width: 1024px;
+    left: 50%;
+    margin-left: -512px
+}
+
+header.fixxxed .header_top {
+    display: none
+}
+
+header.fixxxed .header_bottom {
+    margin-top: 0
+}
+
+.doctor_question.popup .close_p a {
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    background: url(http://mamovediya.com.ua/assets/close-popover-pink-7bdc6993fd563fffb824fd4fc17c889b.png) 50% 50% no-repeat
+}

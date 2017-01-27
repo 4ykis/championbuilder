@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .show{
+            display: table;
+        }
+        table{
+            border:1px solid #000;
+            border-spacing: 0px;
+            text-align: left;
+            display: none;
+        }
+        thead{
+            text-align: center;
+        }
+        td{
+            padding: 5px 10px;
+        }
+        .error{
+            margin-top: 30px;
+            border:2px solid #8b0000;
+            color: #f08080;
+            padding:10px;
+            max-width:250px;
+            display: none;
+        }
+        .data{
+            display: table !important;
+        }
+
+    </style>
+</head>
+<body lang="en_US">
+<div>
+    <input type="number">
+    <button>CLICK</button>
+    <div class="status"></div>
+    <table class="json" border="1px"></table>
+    <div class="error"></div>
+
+    <table class="data" border="1px"></table>
+</div>
+<script src="assets/js/build.js"></script>
+<!--<script>-->
+<!--    var script = document.createElement('SCRIPT');-->
+<!--    script.src = "https://ru.api.pvp.net/api/lol/ru/v1.4/summoner/by-name/4ykis?api_key=RGAPI-3c01d451-3180-40b2-ae6c-f7668ffe44bc&callback=FuncResp";-->
+<!--    document.getElementsByTagName("head")[0].appendChild(script);-->
+<!--    function FuncResp(result) {-->
+<!--        alert(result)-->
+<!--    }-->
+<!---->
+<!--</script>-->
+</body>
+</html>
+

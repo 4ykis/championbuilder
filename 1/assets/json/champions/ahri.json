@@ -1,0 +1,92 @@
+{
+
+  "name": "Ahri",
+  "icon": "assets/img/AhriSquare.png",
+  "skills": {
+      "p": {
+        "name": "Essence Theft",
+        "icon":"assets/img/spell/Ahri_SoulEater.png",
+        "passive": true,
+        "ult": false,
+        "base": [3,5,9,18],
+        "lvl":[1,6,11,16],
+        "ap_ratio": 0.09,
+        "mr_ratio": 0.0,
+        "ad_ratio": 0.0,
+        "arm_ratio": 0.0,
+        "mana_cost": 0
+      },
+      "q": {
+        "name": "Orb of Deception",
+        "passive": false,
+        "ult": false,
+        "icon":"assets/img/spell/AhriOrbofDeception.png",
+        "base": [40,65,90,115,140],
+        "ap_ratio": 0.35,
+        "mr_ratio": 0.0,
+        "ad_ratio": 0.0,
+        "arm_ratio": 0.0,
+        "mana_cost": [60,70,75,80,85],
+        "cd": [7,7,7,7,7]
+      },
+      "w": {
+        "name": "Fox Fire",
+        "passive": false,
+        "ult": false,
+        "icon":"assets/img/spell/AhriFoxFire.png",
+        "base": [40,65,90,115,140],
+        "ap_ratio": 0.35,
+        "mr_ratio": 0.0,
+        "ad_ratio": 0.0,
+        "arm_ratio": 0.0,
+        "mana_cost": [50,50,50,50,50],
+        "cd": [9,8,7,6,5]
+      },
+      "e": {
+        "name": "Charm",
+        "passive": false,
+        "ult": false,
+        "icon":"assets/img/spell/AhriSeduce.png",
+        "base": [60,95,130,165,200],
+        "ap_ratio": 0.5,
+        "mr_ratio": 0.0,
+        "ad_ratio": 0.0,
+        "arm_ratio": 0.0,
+        "mana_cost": [85,85,85,85,85],
+        "cd": [12,12,12,12,12]
+      },
+      "r": {
+        "icon":"assets/img/spell/AhriTumble.png",
+        "name": "Spirit Rush",
+        "base": [70,110,150],
+        "ap_ratio": 0.3,
+        "mr_ratio": 0.0,
+        "ad_ratio": 0.0,
+        "arm_ratio": 0.0,
+        "mana_cost": [100,100,100,100,100],
+        "ult": true,
+        "passive": false,
+        "cd": [110,95,80]
+      }
+    },
+  "base":{
+    "hp":514.4,
+    "hp5":6.505,
+    "mp":334,
+    "mp5":6,
+    "ad":53.04,
+    "as":0.668,
+    "arm":20.88,
+    "mr":30,
+    "ms":330,
+    "lvlhp":80,
+    "lvlhp5":0.6,
+    "lvlmp":50,
+    "lvlmp5":0.8,
+    "lvlad":3,
+    "lvlas":0.02,
+    "lvlarm":3.5,
+    "lvlmr":0
+  }
+
+}

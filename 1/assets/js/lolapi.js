@@ -5,11 +5,10 @@
  * https://ru.api.pvp.net/api/lol/ru/v1.4/summoner/by-name/4ykis?api_key=RGAPI-3c01d451-3180-40b2-ae6c-f7668ffe44bc
  */
 
-var $ = require('jquery');
+// var $ = require('jquery');
 // function onSuccess(data) {};
 function addParams(data) {
     var p = $('.json');
-    console.log('funct');
     p.addClass('show');
     var content = '<thead><tr><td colspan="2" align="center">'+data.name+'</td></td></tr></thead>'+
                 '<tr><td>Armor</td><td>'+data.stats.armor+'</td></tr>'+
@@ -22,7 +21,7 @@ function addParams(data) {
             // console.log(this);
     p.html(content);
 }
-function ChampAJAX() {
+function ChampAJAX(id,lang,param) {
     var err = $('.error');
     var ajax = $.ajax({
         url: 'ajax.php',
@@ -40,12 +39,35 @@ function ChampAJAX() {
                 $('.json').removeClass('show');
             }
         },
-        success: function(data){
+        success: function (data) {
             addParams(data);
             console.log(data);
             err.hide();
         }
-        // success: onSuccess
+
+    });
+}
+
+function ChampList(){
+    $.ajax({
+        url:'https://global.api.pvp.net/api/lol/static-data/ru/v1.2/champion?locale=en_US&champData=all&api_key=RGAPI-df7c9f1d-d4d1-4051-8313-d14a584cc8d2',
+        dataType:"json",
+        type:"GET",
+        error: function(data){
+            err.show();
+            err.html("Error:"+data.status+" "+ data.statusText);
+        },
+        success: function(data){
+            $.each(data.keys,function (key,value) {
+                // console.log(this);
+                var inner = '<tr><td>'+value+'</td><td>'+key+'</td></tr>';
+                $('.data').append(inner);
+
+
+                ChampAJAX();
+
+            })
+        }
     });
 }
 
@@ -58,7 +80,7 @@ $('button').on('click',function(){
     var err = $('.error');
     //ajax
     if(id.length > 0 ){
-        ChampAJAX();
+        ChampAJAX(id,lang,param);
     } else {
         $('input').css('border-color','#ff0000');
         err.html('Please type id');
@@ -66,23 +88,5 @@ $('button').on('click',function(){
         err.show();
     }
 });
-$.ajax({
-   url:'https://global.api.pvp.net/api/lol/static-data/ru/v1.2/champion?locale=en_US&champData=all&api_key=RGAPI-df7c9f1d-d4d1-4051-8313-d14a584cc8d2',
-    dataType:"json",
-    type:"GET",
-    error: function(data){
-        err.show();
-        err.html("Error:"+data.status+" "+ data.statusText);
-    },
-    success: function (data) {
-        console.log(data);
-        $.each(data.keys,function (key,value) {
-            // console.log(this);
-            var inner = '<tr><td>'+value+'</td><td>'+key+'</td></tr>';
 
-            $('.data').append(inner);
-        })
-    }
-
-});
 // end lolapi.js ..................

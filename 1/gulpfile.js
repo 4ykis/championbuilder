@@ -31,7 +31,7 @@ var gulp = require('gulp'),
 var browserify = require('browserify'),
     watchify = require('watchify'),
     source = require('vinyl-source-stream'),
-    sourceFile = 'assets/js/*.js',
+    sourceFile = 'assets/js/lolapi.js',
     destFolder = 'assets/js/',
     destFile = 'build.js';
 

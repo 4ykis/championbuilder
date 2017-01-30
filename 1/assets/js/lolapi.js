@@ -6,7 +6,7 @@
  */
 
 // var $ = require('jquery');
-// function onSuccess(data) {};
+// function add all stats in table from json by id;
 function addParams(data) {
     var p = $('.json');
     p.addClass('show');
@@ -21,16 +21,42 @@ function addParams(data) {
             // console.log(this);
     p.html(content);
 }
-function ChampAJAX(id,lang,param) {
-    var err = $('.error');
+// AJAX take all Champions
+function takeAllChamps(){
+    var err  = $('.error');
+    var lang = $('body').attr('lang');
     var ajax = $.ajax({
-        url: 'ajax.php',
-        // context: document.body,
+        url: 'assets/ajax/takeAllChamps.php',
+        // url:'https://ru.api.pvp.net/api/lol/ru/v1.2/champion/22?api_key=RGAPI-df7c9f1d-d4d1-4051-8313-d14a584cc8d2',
         dataType:"json",
-        type: 'POST',
-        data:{"id":id,"lang":lang,"param":param},
-        // response:'json',
-        // crossDomain: true,
+        type: "POST",
+        data:{"id":"","lang":lang},
+        error: function(data){
+            err.show();
+            err.html("Error:"+data.status+" "+ data.statusText);
+            // console.log(data);
+        },
+        success: function () {
+            console.log('success');
+        }
+    });
+    ajax.done(function (data) {
+        console.log(data);
+        var json = JSON.stringify(data);
+        localStorage.setItem('champions', json);
+        console.log(json);
+    });
+}
+// take champion stats by ID
+function ChampAJAX(id) {
+    var lang = $('body').attr('lang');
+    var err  = $('.error');
+    var ajax = $.ajax({
+        url: 'assets/ajax/takeChampStats.php',
+        // url:'https://ru.api.pvp.net/api/lol/ru/v1.2/champion/22?api_key=RGAPI-df7c9f1d-d4d1-4051-8313-d14a584cc8d2',
+        dataType:"json",
+        type: "POST",
+        data:{"id":id,"lang":lang},
         error: function(data){
             err.show();
             err.html("Error:"+data.status+" "+ data.statusText);
@@ -39,48 +65,48 @@ function ChampAJAX(id,lang,param) {
                 $('.json').removeClass('show');
             }
         },
-        success: function (data) {
-            addParams(data);
-            console.log(data);
-            err.hide();
-        }
-
+        success: function () {}
     });
+    ajax.done(function (data) {
+        // console.log(data);
+        addParams(data);
+        // ChampListAdd(data);
+    })
 }
-
-function ChampList(){
-    $.ajax({
-        url:'https://global.api.pvp.net/api/lol/static-data/ru/v1.2/champion?locale=en_US&champData=all&api_key=RGAPI-df7c9f1d-d4d1-4051-8313-d14a584cc8d2',
-        dataType:"json",
-        type:"GET",
-        error: function(data){
-            err.show();
-            err.html("Error:"+data.status+" "+ data.statusText);
-        },
-        success: function(data){
-            $.each(data.keys,function (key,value) {
-                // console.log(this);
-                var inner = '<tr><td>'+value+'</td><td>'+key+'</td></tr>';
-                $('.data').append(inner);
-
-
-                ChampAJAX();
-
-            })
+// ChampAJAX(22);
+function takeChampID(ne1){
+    var name = ne1;
+    var id;
+    $.each(champ,function () {
+        if(this.key == name){
+            id = this.id
         }
     });
+
+    ChampAJAX(id);
+
+}
+ChampAJAX(22);
+ChampListAdd();
+// Take all champions id in to localStorage
+function ChampListAdd(){
+    if(localStorage.getItem('champions') == null ){
+        takeAllChamps();
+    }
+    champ = JSON.parse(localStorage.getItem('champions')).data;
 }
 
 
 $('button').on('click',function(){
-    var id = $('input').val();
-    // var p = $('.json');
-    var lang = $('body').attr('lang');
-    var param = 'all';
+    var name = $('input').val();
     var err = $('.error');
     //ajax
-    if(id.length > 0 ){
-        ChampAJAX(id,lang,param);
+    if(name.length > 0 ){
+        var n1 = name.slice(0,1);
+        var n2 = name.slice(1);
+        var n = n1.toUpperCase()+n2.toLowerCase();
+        var id = takeChampID(n);
+
     } else {
         $('input').css('border-color','#ff0000');
         err.html('Please type id');

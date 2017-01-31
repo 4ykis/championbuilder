@@ -31,17 +31,53 @@
         .data{
             display: table !important;
         }
-
+        .champ-popup{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,.5);
+        }
+        .cont{
+            position: absolute;
+            width: 60%;
+            height: 500px;
+            top: 20px;
+            left: 20%;
+            overflow-y: scroll;
+            background: #fff;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .champ-icon-block{
+            border:1px solid #000;
+            width: 33%;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        .champ-icon-block:hover{
+            color: #1570a7;
+        }
     </style>
 </head>
 <body lang="en_US">
-<div class="cont">
+<div class="content">
     <input type="text">
     <button>CLICK</button>
+    <span class="js-list">List</span>
     <div class="status"></div>
     <table class="json" border="1px"></table>
     <div class="error"></div>
     <div class="data"></div>
+    <div class="error-popup">
+
+    </div>
+    <div class="champ-popup">
+        <div class="cont"></div>
+    </div>
 </div>
 <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"

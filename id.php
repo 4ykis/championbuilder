@@ -66,6 +66,7 @@
 <body lang="en_US">
 <div class="content">
     <input type="text">
+    <input class="js-level" type="number" max="18" min="1" value="1">
     <button>CLICK</button>
     <span class="js-list">List</span>
     <div class="status"></div>

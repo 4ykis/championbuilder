@@ -1,0 +1,111 @@
+
+.main-info{
+  margin-bottom: 20px;
+  .icon{
+    width:128px;
+    height:128px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .spells{
+    width:calc(100% - 128px);
+    padding-left: 20px;
+  }
+  .spell-items{
+    display: flex;
+    align-items:flex-start;
+    justify-content:flex-start;
+    flex-wrap: nowrap;
+    .spl-item{
+      margin-right: 15px;
+      cursor: pointer;
+      img{
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  .spell-descr{
+    margin-top: 15px;
+    .spl-dscr{
+      background: #1f4da9;
+      padding: 10px 5px;
+      &:not(:first-child){
+        display: none;
+      }
+      .title{
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//stats
+.stats{
+  width:40%;
+  background: #439c92;
+  .level-block{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    align-items: baseline;
+    input[type='number']{
+      min-width:100px;
+      line-height: 28px;
+      padding: 0 5px;
+      border:1px solid #000;
+    }
+  }
+  table{
+    border-spacing: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+.additional-blocks{
+  width: 60%;
+  background: #ff8a65;
+}
+
+
+
+
+// CHampion popup
+.champ-popup{
+  @include fix-cont();
+  .cont{
+    width: 60%;
+    height: 400px;
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    display: flex;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 15px;
+    .champ-icon-block{
+      width: 33%;
+      line-height: 30px;
+      font-family:$roboto;
+      border:1px solid #000;
+      text-align: center;
+      cursor: pointer;
+      &:hover{
+        background: #cfcfcf;
+        span {
+          color: #1f4da9;
+        }     
+      }
+    }
+  }
+}

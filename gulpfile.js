@@ -43,7 +43,7 @@ var bundler = watchify(browserify(sourceFile,{
     plugin: [watchify]
 }));
 
-
+//browser reload
 function watchStyles() {
     gulp.watch("assets/scss/**/*.scss", ['sass', 'cssmin']);
     gulp.watch([
@@ -90,7 +90,7 @@ gulp.task('sass', function(){
             cascade: false
         }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('assets/css/compressed'))
+        .pipe(gulp.dest('assets/css'))
 });
 
 gulp.task('cssmin', ['sass'], function () {
@@ -118,7 +118,7 @@ gulp.task('concatcss', function() {
 gulp.task('concatjs', function() {
     return gulp.src([
         'assets/js/vendor/**/*.js',
-        'assets/js/main.js',
+        'assets/js/main-old.js',
         'assets/js/dev.js'
     ])
         .pipe(concat('custom.js'))

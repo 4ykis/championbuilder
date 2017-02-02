@@ -1,40 +1,4 @@
-@font-face {
-    font-family: 'RobotoLight';
-    src: url('../../fonts/Roboto/RobotoLight.eot');
-    src: url('../../fonts/Roboto/RobotoLight.eot') format('embedded-opentype'),
-    url('../../fonts/Roboto/RobotoLight.woff2') format('woff2'),
-    url('../../fonts/Roboto/RobotoLight.woff') format('woff'),
-    url('../../fonts/Roboto/RobotoLight.ttf') format('truetype'),
-    url('../../fonts/Roboto/RobotoLight.svg#RobotoLight') format('svg');
-}
-
-@font-face {
-    font-family: 'RobotoBold';
-    src: url('../../fonts/Roboto/RobotoBold.eot');
-    src: url('../../fonts/Roboto/RobotoBold.eot') format('embedded-opentype'),
-    url('../../fonts/Roboto/RobotoBold.woff2') format('woff2'),
-    url('../../fonts/Roboto/RobotoBold.woff') format('woff'),
-    url('../../fonts/Roboto/RobotoBold.ttf') format('truetype'),
-    url('../../fonts/Roboto/RobotoBold.svg#RobotoBold') format('svg');
-}
-
-
-@font-face {
-    font-family: 'AcromExtraBold';
-    src: url('../../fonts/Acrom/acrom900.eot');
-    src: url('../../fonts/Acrom/acrom900.eot') format('embedded-opentype'),
-    url('../../fonts/Acrom/acrom900.woff2') format('woff2'),
-    url('../../fonts/Acrom/acrom900.woff') format('woff'),
-    url('../../fonts/Acrom/acrom900.ttf') format('truetype');
-}
-@font-face {
-    font-family: 'AcromLight';
-    src: url('../../fonts/Acrom/acrom300.eot');
-    src: url('../../fonts/Acrom/acrom300.eot') format('embedded-opentype'),
-    url('../../fonts/Acrom/acrom300.woff2') format('woff2'),
-    url('../../fonts/Acrom/acrom300.woff') format('woff'),
-    url('../../fonts/Acrom/acrom300.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700&subset=cyrillic');
 
 
 

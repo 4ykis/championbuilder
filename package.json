@@ -1,14 +1,7 @@
 {
-  "name": "webiLive",
+  "name": "MyProject",
   "version": "1.0.0",
-  "description": "webiLive package.json",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "eugene",
-  "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "^2.17.3",
     "browserify": "^13.1.1",
     "gulp": "^3.9.0",
@@ -26,8 +19,5 @@
     "select2": "^4.0.3",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.8.0"
-  },
-  "dependencies": {
-    "dev": "^0.1.3"
   }
 }

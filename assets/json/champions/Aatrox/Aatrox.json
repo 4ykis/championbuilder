@@ -1,0 +1,432 @@
+{
+  "id": 266,
+  "key": "Aatrox",
+  "name": "Aatrox",
+  "title": "the Darkin Blade",
+  "skins": [
+    {
+      "id": 266000,
+      "name": "default",
+      "num": 0
+    },
+    {
+      "id": 266001,
+      "name": "Justicar Aatrox",
+      "num": 1
+    },
+    {
+      "id": 266002,
+      "name": "Mecha Aatrox",
+      "num": 2
+    },
+    {
+      "id": 266003,
+      "name": "Sea Hunter Aatrox",
+      "num": 3
+    }
+  ],
+  "lore": "Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatrox's seemingly living blade drinks in their blood, empowering him and fueling his brutal, elegant campaign of slaughter.<br><br>The earliest tale of Aatrox is as old as recorded history. It tells of a war between two great factions remembered only as the Protectorate and the Magelords. Over time, the Magelords won a series of crushing victories, leaving them on the brink of obliterating their sworn enemy forever. On the day of their final confrontation, the Protectorate army found themselves outnumbered, exhausted, and poorly equipped. They braced for inevitable defeat.<br><br>Just when all hope seemed lost, Aatrox appeared among the ranks of the Protectorate. With but a few words, he urged the soldiers to fight to the last before throwing himself into battle. His presence inspired the desperate warriors. At first, they could only watch in awe as this unknown hero cleaved through their enemies, his body and blade moving in unison as if one being. Soon, the warriors found themselves imbued with a potent thirst for battle. They followed Aatrox into the fray, each fighting with the furious strength of ten until they had won a most unlikely victory.<br><br>Aatrox vanished after that battle, but the Protectorate army's newfound fury did not. Their surprising triumph led to many more until they were able to finally return home victorious. Their countrymen hailed them as heroes, but though they had saved their entire civilization from destruction, darkness lingered in the mind of each warrior. Something within them had changed. Over time, their memories of battle faded, only to be replaced with a grim revelation: their acts of heroism were, in fact, brutal atrocities committed by their own hands.<br><br>Tales like these appear among the myths of many cultures. If they are all to be believed, Aatrox's presence has changed the course of some of the most important wars in history. Though these stories remember him as a savior in dark times, Aatrox's true legacy may be a world filled with conflict and strife.<br><br>''Some fight for honor, some fight for glory. It matters only that you fight.''<br>-- Aatrox",
+  "allytips": [
+    "Avoid engaging in a fight with low health unless your Blood Well is full so that you regain enough health to continue fighting.",
+    "Building Life Steal can be very potent on Aatrox to help compensate for his health costs.",
+    "Massacre is great at turning the tide of a battle. Make sure to use it at the right moment to maximize its benefits."
+  ],
+  "enemytips": [
+    "When Aatrox takes fatal damage he is healed for the amount currently in his resource bar, landing a fatal blow on him while the resource bar is low will result in him reviving with a lower amount of Health.",
+    "When Aatrox casts Dark Flight towards your location, avoid being knocked up by moving away from the center of impact.",
+    "Aatrox is auto attack reliant for most of his damage and survivability, reducing his attack speed by purchasing Randuin's Omen or Frozen Heart can help reduce both of those components greatly."
+  ],
+  "tags": [
+    "Fighter",
+    "Tank"
+  ],
+  "partype": "BloodWell",
+  "info": {
+    "attack": 8,
+    "defense": 4,
+    "magic": 3,
+    "difficulty": 4
+  },
+  "stats": {
+    "arm": 24.384,
+    "ad": 60.376,
+    "range": 150.0,
+    "as": -0.04,
+    "crit": 0.0,
+    "hp": 537.8,
+    "hp5": 6.59,
+    "ms": 345.0,
+    "mp": 105.6,
+    "mp5": 0.0,
+    "mr": 32.1,
+    "lvl":{
+      "arm": 3.8,
+      "ad": 3.2,
+      "as": 3.0,
+      "crit": 0.0,
+      "hp": 85.0,
+      "hp5": 0.5,
+      "mp": 45.0,
+      "mp5": 0.0,
+      "mr": 1.25
+    }
+  },
+  "spells": [
+    {
+      "name": "Dark Flight",
+      "description": "Aatrox takes flight and slams down at a targeted location, dealing damage and knocking up enemies at the center of impact.",
+      "tooltip": "Aatrox takes flight and slams down at target location, dealing {{ e1 }}<span class=\"colorF88017\"> (+{{ a1 }})</span> physical damage and knocking up enemies at the center of impact for {{ e5 }} second.",
+      "resource": "{{ e3 }}% of current Health ",
+      "cost": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "costType": "pofcurrentHealth",
+      "cooldown": [
+        16.0,
+        15.0,
+        14.0,
+        13.0,
+        12.0
+      ],
+      "effect": [
+        null,
+        [
+          70.0,
+          115.0,
+          160.0,
+          205.0,
+          250.0
+        ],
+        [
+          22.0,
+          20.0,
+          18.0,
+          16.0,
+          14.0
+        ],
+        [
+          10.0,
+          10.0,
+          10.0,
+          10.0,
+          10.0
+        ],
+        [
+          225.0,
+          225.0,
+          225.0,
+          225.0,
+          225.0
+        ],
+        [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      ],
+      "effectBurn": [
+        "",
+        "70/115/160/205/250",
+        "22/20/18/16/14",
+        "10",
+        "225",
+        "1"
+      ],
+      "vars": [
+        {
+          "key": "a1",
+          "link": "bonusattackdamage",
+          "coeff": [
+            0.6
+          ]
+        }
+      ],
+      "range": [
+        25000,
+        25000,
+        25000,
+        25000,
+        25000
+      ],
+      "key": "AatroxQ"
+    },
+    {
+      "name": "Blood Thirst / Blood Price",
+      "description": "While toggled on Aatrox deals bonus damage every third subsequent attack at the expense of his own Health. While toggled off Aatrox restores Health every third subsequent attack.",
+      "tooltip": "<span class=\"colorFF9900\">Toggle Off:</span><span class=\"colore60000\"> Blood Thirst: </span>Every third attack, Aatrox restores {{ e3 }}<span class=\"colorF88017\"> (+{{ a1 }})</span> Health, increased by {{ e1 }}% ({{ f5 }}) when below half Health.<br><br><span class=\"colorFF9900\">Toggle On:</span><span class=\"color9900ff\"> Blood Price: </span>Every third attack, Aatrox deals {{ e2 }}<span class=\"colorF88017\"> (+{{ a2 }})</span> bonus physical damage and loses <span class=\"colorCC3300\">{{ f4 }}</span> Health.",
+      "resource": "No Cost",
+      "cost": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "costType": "NoCost",
+      "cooldown": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "effect": [
+        null,
+        [
+          200.0,
+          200.0,
+          200.0,
+          200.0,
+          200.0
+        ],
+        [
+          60.0,
+          95.0,
+          130.0,
+          165.0,
+          200.0
+        ],
+        [
+          20.0,
+          25.0,
+          30.0,
+          35.0,
+          40.0
+        ],
+        [
+          25.0,
+          25.0,
+          25.0,
+          25.0,
+          25.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0,
+          50.0,
+          50.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "effectBurn": [
+        "",
+        "200",
+        "60/95/130/165/200",
+        "20/25/30/35/40",
+        "25",
+        "50",
+        "0.5"
+      ],
+      "vars": [
+        {
+          "key": "a1",
+          "link": "bonusattackdamage",
+          "coeff": [
+            0.25
+          ]
+        },
+        {
+          "key": "a2",
+          "link": "bonusattackdamage",
+          "coeff": [
+            1.0
+          ]
+        }
+      ],
+      "range": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "key": "AatroxW"
+    },
+    {
+      "name": "Blades of Torment",
+      "description": "Aatrox unleashes the power of his blade, dealing damage to enemies hit and slowing them.",
+      "tooltip": "Aatrox unleashes the power of his blade, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }}) <span class=\"colorF88017\">(+{{ a2 }})</span></span> Magic Damage to enemies hit and slowing them by {{ e2 }}% for {{ e4 }} seconds.",
+      "resource": "{{ e5 }}% of current Health ",
+      "cost": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "costType": "pofcurrentHealth",
+      "cooldown": [
+        12.0,
+        11.0,
+        10.0,
+        9.0,
+        8.0
+      ],
+      "effect": [
+        null,
+        [
+          75.0,
+          110.0,
+          145.0,
+          180.0,
+          215.0
+        ],
+        [
+          40.0,
+          40.0,
+          40.0,
+          40.0,
+          40.0
+        ],
+        [
+          15.0,
+          15.0,
+          15.0,
+          15.0,
+          15.0
+        ],
+        [
+          1.75,
+          2.0,
+          2.25,
+          2.5,
+          2.75
+        ],
+        [
+          5.0,
+          5.0,
+          5.0,
+          5.0,
+          5.0
+        ]
+      ],
+      "effectBurn": [
+        "",
+        "75/110/145/180/215",
+        "40",
+        "15",
+        "1.75/2/2.25/2.5/2.75",
+        "5"
+      ],
+      "vars": [
+        {
+          "key": "a1",
+          "link": "spelldamage",
+          "coeff": [
+            0.6
+          ]
+        },
+        {
+          "key": "a2",
+          "link": "bonusattackdamage",
+          "coeff": [
+            0.6
+          ]
+        }
+      ],
+      "range": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "rangeBurn": "1000",
+      "key": "AatroxE"
+    },
+    {
+      "name": "Massacre",
+      "description": "Aatrox draws in the blood of his foes, damaging all nearby enemy champions around him and gaining increased Attack Speed and bonus Attack Range for a short duration.",
+
+      "tooltip": "Aatrox draws in the blood of his foes, dealing {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to nearby enemy champions. Massacre fills Aatrox's Blood Well by {{ e7 }}% for each champion hit and grants him {{ e3 }}% attack speed and {{ e5 }} attack range for {{ e8 }} seconds.",
+      "resource": "No Cost",
+      "cost": [
+        0,
+        0,
+        0
+      ],
+      "costType": "NoCost",
+      "cooldown": [
+        100.0,
+        85.0,
+        70.0
+      ],
+      "effect": [
+        null,
+        [
+          12.0,
+          12.0,
+          12.0
+        ],
+        [
+          200.0,
+          300.0,
+          400.0
+        ],
+        [
+          40.0,
+          50.0,
+          60.0
+        ],
+        [
+          10.0,
+          10.0,
+          10.0
+        ],
+        [
+          175.0,
+          175.0,
+          175.0
+        ],
+        [
+          50.0,
+          65.0,
+          80.0
+        ],
+        [
+          20.0,
+          20.0,
+          20.0
+        ],
+        [
+          12.0,
+          12.0,
+          12.0
+        ]
+      ],
+      "vars": [
+        {
+          "key": "a1",
+          "link": "spelldamage",
+          "coeff": [
+            1.0
+          ]
+        }
+      ],
+      "range": [
+        550,
+        550,
+        550
+      ],
+      "key": "AatroxR"
+    }
+  ],
+  "passive": {
+    "name": "Blood Well",
+    "description": "When using an ability that costs Health, Aatrox stores the self-inflicted damage into the Blood Well. Upon taking fatal damage, Aatrox extracts the blood from the well and recovers it as Health over a brief duration. Additionally, Aatrox gains 1% Attack Speed for every 2% blood that is in the well.",
+    "image": "Aatrox_Passive.png"
+  },
+}

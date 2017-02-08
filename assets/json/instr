@@ -1,0 +1,51 @@
+del: image
+del: blurb
+del: partype
+
+----rename:
+stats [
+
+"stats": {
+    "armor": 20.88,                 --> arm
+    "attackdamage": 53.04,          --> ad
+    "crit": 0.0,                    --> crit
+    "hp": 514.4,                    --> hp
+    "hpregen": 6.505,               --> hp5
+    "movespeed": 330.0,             --> ms
+    "mp": 334.0,                    --> mp
+    "mpregen": 6.0,                 --> mp5
+    "spellblock": 30.0,             --> mr
+    "attackspeedoffset": -0.065,    --> as
+
+---------------------------------------
+        "lvl":{
+            "armorperlevel": 3.5,           --> arm
+            "spellblockperlevel": 0.0       --> mr
+            "mpregenperlevel": 0.8,         --> mp5
+            "mpperlevel": 50.0,             --> mp
+            "hpregenperlevel": 0.6,         --> hp5
+            "hpperlevel": 80.0,             --> hp
+            "critperlevel": 0.0,            --> crit
+            "attackspeedperlevel": 2.0,     --> as
+            "attackdamageperlevel": 3.0,    --> ad
+        }
+  },
+
+]
+-----
+spells -> for each
+    del: sanitizedDescription
+    del: sanitizedTooltip
+    del: leveltip
+    del: image
+    del: maxrank
+    del: cooldownBurn
+    del: effectBurn"
+    del: rangeBurn
+-----
+passive ->del: sanitizedDescription
+image лишаємо лише full і зводимо до вигляду:
+"image":"name.png"
+
+
+del: recommended
